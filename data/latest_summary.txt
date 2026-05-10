@@ -1,0 +1,18 @@
+00981A holdings update: 2026-05-08
+Holdings count: 50
+Snapshot: C:\PythonSideProjects\ActiveETF\data\snapshots\00981A.TW_2026-05-08.csv
+Comparison: C:\PythonSideProjects\ActiveETF\data\comparisons\00981A.TW_2026-05-08_diff.csv
+Changes: 5 increased, 4 decreased, 0 added, 0 removed
+
+Top increases:
+- 2404.TW 漢唐: +301,000 (1,093,000 -> 1,394,000)
+- 6669.TW 緯穎: +228,000 (1,819,000 -> 2,047,000)
+- 6223.TW 旺矽: +132,000 (1,922,000 -> 2,054,000)
+- 3017.TW 奇鋐: +120,000 (4,082,000 -> 4,202,000)
+- 4966.TW 譜瑞-KY: +100,000 (386,000 -> 486,000)
+
+Top decreases:
+- 6147.TW 頎邦: -7,984,000 (7,985,000 -> 1,000)
+- 8358.TW 金居: -3,578,000 (5,558,000 -> 1,980,000)
+- 3189.TW 景碩: -1,616,000 (5,360,000 -> 3,744,000)
+- 5347.TW 世界: -62,000 (63,000 -> 1,000)
