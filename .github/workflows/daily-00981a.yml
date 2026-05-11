@@ -4,10 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     # GitHub Actions cron uses UTC. These are fallback windows for
-    # 18:30, 19:00, and 20:00 Asia/Taipei.
+    # 18:30, 19:00, 20:00, 20:30, and 21:30 Asia/Taipei.
     - cron: "30 10 * * *"
     - cron: "0 11 * * *"
     - cron: "0 12 * * *"
+    - cron: "30 12 * * *"
+    - cron: "30 13 * * *"
 
 permissions:
   contents: write
