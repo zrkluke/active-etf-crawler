@@ -3,8 +3,11 @@ name: Daily 00981A Holdings
 on:
   workflow_dispatch:
   schedule:
-    # 18:30 Asia/Taipei. GitHub Actions cron uses UTC.
+    # GitHub Actions cron uses UTC. These are fallback windows for
+    # 18:30, 19:00, and 20:00 Asia/Taipei.
     - cron: "30 10 * * *"
+    - cron: "0 11 * * *"
+    - cron: "0 12 * * *"
 
 permissions:
   contents: write
