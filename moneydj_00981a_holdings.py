@@ -37,6 +37,7 @@ class RunResult:
     snapshot_path: Path
     comparison_path: Path | None
     summary_path: Path
+    is_new_snapshot: bool
 
 
 def fetch_html(url: str) -> str:
@@ -330,6 +331,8 @@ def run(url: str, output_dir: Path) -> RunResult:
     data_date, holdings = parse_holdings(page_html)
 
     previous_path = find_previous_snapshot(output_dir, data_date)
+    expected_snapshot_path = output_dir / "snapshots" / f"{ETF_ID}_{data_date}.csv"
+    is_new_snapshot = not expected_snapshot_path.exists()
     current_path = write_holdings_snapshot(output_dir, data_date, holdings)
     comparison_path = (
         write_comparison(output_dir, data_date, current_path, previous_path)
@@ -342,6 +345,7 @@ def run(url: str, output_dir: Path) -> RunResult:
         snapshot_path=current_path,
         comparison_path=comparison_path,
         summary_path=output_dir / "latest_summary.txt",
+        is_new_snapshot=is_new_snapshot,
     )
     summary_path = write_summary(output_dir, build_summary(result))
 
@@ -351,6 +355,7 @@ def run(url: str, output_dir: Path) -> RunResult:
         snapshot_path=result.snapshot_path,
         comparison_path=result.comparison_path,
         summary_path=summary_path,
+        is_new_snapshot=result.is_new_snapshot,
     )
 
 
@@ -366,8 +371,11 @@ def main() -> int:
         summary = result.summary_path.read_text(encoding="utf-8")
         print(summary)
         if args.notify:
-            sent = notify(summary)
-            print(f"notifications: {', '.join(sent) if sent else 'skipped, no notification secrets configured'}")
+            if result.is_new_snapshot:
+                sent = notify(summary)
+                print(f"notifications: {', '.join(sent) if sent else 'skipped, no notification secrets configured'}")
+            else:
+                print("notifications: skipped, snapshot already exists for this data date")
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
