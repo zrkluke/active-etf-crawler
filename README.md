@@ -22,18 +22,18 @@ snapshot exists.
 
 The workflow is in `.github/workflows/daily-00981a.yml`.
 
-It runs every day at `18:30`, `19:00`, `20:00`, `20:30`, and `21:30 Asia/Taipei`. GitHub Actions
+It runs every day at `18:37`, `19:13`, `20:47`, `21:23`, and `22:11 Asia/Taipei`. GitHub Actions
 scheduled jobs can be delayed or occasionally dropped, so the later entries are
 fallback windows. The script only sends a notification when the MoneyDJ data date
 creates a new snapshot, so fallback runs do not send duplicate messages.
 
 ```yaml
 schedule:
-  - cron: "30 10 * * *"
-  - cron: "0 11 * * *"
-  - cron: "0 12 * * *"
-  - cron: "30 12 * * *"
-  - cron: "30 13 * * *"
+  - cron: "37 10 * * *"
+  - cron: "13 11 * * *"
+  - cron: "47 12 * * *"
+  - cron: "23 13 * * *"
+  - cron: "11 14 * * *"
 ```
 
 It also supports manual runs from the GitHub Actions page with `workflow_dispatch`.
