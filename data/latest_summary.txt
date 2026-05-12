@@ -1,17 +1,17 @@
-00981A holdings update: 2026-05-11
-Holdings count: 50
-Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-11.csv
-Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-11_diff.csv
-Changes: 7 increased, 1 decreased, 1 added, 1 removed
+00981A holdings update: 2026-05-12
+Holdings count: 51
+Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-12.csv
+Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-12_diff.csv
+Changes: 7 increased, 1 decreased, 1 added, 0 removed
 
 Top increases:
-- 3036.TW 文曄: +1,200,000 (0 -> 1,200,000)
-- 4966.TW 譜瑞-KY: +550,000 (486,000 -> 1,036,000)
-- 8210.TW 勤誠: +427,000 (1,540,000 -> 1,967,000)
-- 6415.TW 矽力*-KY: +280,000 (660,000 -> 940,000)
-- 3017.TW 奇鋐: +149,000 (4,202,000 -> 4,351,000)
-- 6223.TW 旺矽: +30,000 (2,054,000 -> 2,084,000)
-- 6515.TW 穎崴: +20,000 (422,000 -> 442,000)
+- 2313.TW 華通: +1,500,000 (2,624,000 -> 4,124,000)
+- 3711.TW 日月光投控: +1,165,000 (13,833,000 -> 14,998,000)
+- 3037.TW 欣興: +435,000 (10,387,000 -> 10,822,000)
+- 2330.TW 台積電: +298,000 (11,359,000 -> 11,657,000)
+- 6669.TW 緯穎: +247,000 (2,047,000 -> 2,294,000)
+- 3008.TW 大立光: +159,000 (0 -> 159,000)
+- 3017.TW 奇鋐: +117,000 (4,351,000 -> 4,468,000)
 
 Top decreases:
-- 3189.TW 景碩: -3,744,000 (3,744,000 -> 0)
+- 2317.TW 鴻海: -10,565,000 (14,177,000 -> 3,612,000)
