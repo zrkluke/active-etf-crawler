@@ -1,15 +1,14 @@
-00981A holdings update: 2026-05-14
-Holdings count: 52
-Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-14.csv
-Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-14_diff.csv
-Changes: 5 increased, 1 decreased, 1 added, 0 removed
+00981A holdings update: 2026-05-15
+Holdings count: 51
+Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-15.csv
+Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-15_diff.csv
+Changes: 1 increased, 4 decreased, 0 added, 1 removed
 
 Top increases:
-- 6278.TW 台表科: +2,500,000 (0 -> 2,500,000)
-- 5439.TW 高技: +300,000 (3,228,000 -> 3,528,000)
-- 3008.TW 大立光: +170,000 (159,000 -> 329,000)
-- 2383.TW 台光電: +118,000 (4,605,000 -> 4,723,000)
-- 3017.TW 奇鋐: +112,000 (4,813,000 -> 4,925,000)
+- 2303.TW 聯電: +9,793,000 (46,374,000 -> 56,167,000)
 
 Top decreases:
-- 3443.TW 創意: -146,000 (764,000 -> 618,000)
+- 3443.TW 創意: -511,000 (618,000 -> 107,000)
+- 2357.TW 華碩: -293,000 (1,996,000 -> 1,703,000)
+- 3661.TW 世芯-KY: -88,000 (89,000 -> 1,000)
+- 2337.TW 旺宏: -8,000 (8,000 -> 0)
