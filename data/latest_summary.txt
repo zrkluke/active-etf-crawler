@@ -1,13 +1,6 @@
-00981A holdings update: 2026-05-21
+00981A holdings update: 2026-05-22
 Holdings count: 53
-Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-21.csv
-Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-21_diff.csv
-Changes: 3 increased, 1 decreased, 1 added, 0 removed
-
-Top increases:
-- 6271.TW 同欣電: +686,000 (0 -> 686,000)
-- 3533.TW 嘉澤: +148,000 (624,000 -> 772,000)
-- 6669.TW 緯穎: +50,000 (2,294,000 -> 2,344,000)
-
-Top decreases:
-- 2357.TW 華碩: -1,349,000 (1,622,000 -> 273,000)
+Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-22.csv
+Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-22_diff.csv
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
