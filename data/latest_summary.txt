@@ -1,13 +1,17 @@
-00981A holdings update: 2026-05-28
-Holdings count: 50
-Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-28.csv
-Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-28_diff.csv
-Changes: 3 increased, 1 decreased, 0 added, 1 removed
+00981A holdings update: 2026-05-29
+Holdings count: 51
+Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-29.csv
+Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-29_diff.csv
+Changes: 6 increased, 2 decreased, 1 added, 0 removed
 
 Top increases:
-- 6147.TW 頎邦: +1,430,000 (3,201,000 -> 4,631,000)
-- 3711.TW 日月光投控: +1,308,000 (16,640,000 -> 17,948,000)
-- 2330.TW 台積電: +303,000 (11,657,000 -> 11,960,000)
+- 2317.TW 鴻海: +7,306,000 (1,000 -> 7,307,000)
+- 2382.TW 廣達: +2,491,000 (0 -> 2,491,000)
+- 4966.TW 譜瑞-KY: +606,000 (1,036,000 -> 1,642,000)
+- 6274.TW 台燿: +249,000 (4,151,000 -> 4,400,000)
+- 6669.TW 緯穎: +93,000 (2,344,000 -> 2,437,000)
+- 3017.TW 奇鋐: +50,000 (5,141,000 -> 5,191,000)
 
 Top decreases:
-- 6415.TW 矽力*-KY: -1,038,000 (1,038,000 -> 0)
+- 2449.TW 京元電子: -3,060,000 (8,268,000 -> 5,208,000)
+- 8046.TW 南電: -570,000 (11,398,000 -> 10,828,000)
