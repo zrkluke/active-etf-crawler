@@ -1,17 +1,15 @@
-00981A holdings update: 2026-05-29
+00981A holdings update: 2026-06-01
 Holdings count: 51
-Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-05-29.csv
-Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-05-29_diff.csv
-Changes: 6 increased, 2 decreased, 1 added, 0 removed
+Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-06-01.csv
+Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-06-01_diff.csv
+Changes: 4 increased, 2 decreased, 0 added, 0 removed
 
 Top increases:
-- 2317.TW 鴻海: +7,306,000 (1,000 -> 7,307,000)
-- 2382.TW 廣達: +2,491,000 (0 -> 2,491,000)
-- 4966.TW 譜瑞-KY: +606,000 (1,036,000 -> 1,642,000)
-- 6274.TW 台燿: +249,000 (4,151,000 -> 4,400,000)
-- 6669.TW 緯穎: +93,000 (2,344,000 -> 2,437,000)
-- 3017.TW 奇鋐: +50,000 (5,141,000 -> 5,191,000)
+- 2382.TW 廣達: +1,534,000 (2,491,000 -> 4,025,000)
+- 6147.TW 頎邦: +1,144,000 (4,631,000 -> 5,775,000)
+- 2303.TW 聯電: +500,000 (71,190,000 -> 71,690,000)
+- 3443.TW 創意: +71,000 (96,000 -> 167,000)
 
 Top decreases:
-- 2449.TW 京元電子: -3,060,000 (8,268,000 -> 5,208,000)
-- 8046.TW 南電: -570,000 (11,398,000 -> 10,828,000)
+- 3264.TW 欣銓: -4,100,000 (6,217,000 -> 2,117,000)
+- 2383.TW 台光電: -237,000 (4,723,000 -> 4,486,000)
