@@ -1,13 +1,8 @@
-00981A holdings update: 2026-06-02
+00981A holdings update: 2026-06-03
 Holdings count: 51
-Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-06-02.csv
-Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-06-02_diff.csv
-Changes: 1 increased, 3 decreased, 0 added, 0 removed
-
-Top increases:
-- 2382.TW 廣達: +1,416,000 (4,025,000 -> 5,441,000)
+Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-06-03.csv
+Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-06-03_diff.csv
+Changes: 0 increased, 1 decreased, 0 added, 0 removed
 
 Top decreases:
-- 3264.TW 欣銓: -2,116,000 (2,117,000 -> 1,000)
-- 2449.TW 京元電子: -1,563,000 (5,208,000 -> 3,645,000)
-- 8358.TW 金居: -1,000,000 (1,980,000 -> 980,000)
+- 2404.TW 漢唐: -515,000 (1,715,000 -> 1,200,000)
