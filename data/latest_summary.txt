@@ -1,12 +1,9 @@
-00981A holdings update: 2026-06-05
+00981A holdings update: 2026-06-08
 Holdings count: 50
-Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-06-05.csv
-Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-06-05_diff.csv
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
+Snapshot: /home/runner/work/active-etf-crawler/active-etf-crawler/data/snapshots/00981A.TW_2026-06-08.csv
+Comparison: /home/runner/work/active-etf-crawler/active-etf-crawler/data/comparisons/00981A.TW_2026-06-08_diff.csv
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 2345.TW 智邦: +103,000 (6,231,000 -> 6,334,000)
-- 6669.TW 緯穎: +55,000 (2,437,000 -> 2,492,000)
-
-Top decreases:
-- 3008.TW 大立光: -160,000 (161,000 -> 1,000)
+- 2368.TW 金像電: +180,000 (7,769,000 -> 7,949,000)
+- 2454.TW 聯發科: +142,000 (4,263,000 -> 4,405,000)
