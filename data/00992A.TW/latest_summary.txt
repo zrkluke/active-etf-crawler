@@ -1,3 +1,8 @@
-00992A.TW holdings update: 2026-06-09
-Holdings count: 44
-Comparison: skipped because no previous snapshot exists.
+00992A.TW holdings update: 2026-06-10
+Holdings count: 42
+Changes: 0 increased, 3 decreased, 0 added, 2 removed
+
+Top decreases:
+- 4991.TW 環宇-KY: -394,000 (394,000 -> 0)
+- 6510.TW 精測: -129,000 (129,000 -> 0)
+- 6669.TW 緯穎: -91,000 (319,000 -> 228,000)

@@ -1,3 +1,7 @@
-00991A.TW holdings update: 2026-06-09
+00991A.TW holdings update: 2026-06-10
 Holdings count: 50
-Comparison: skipped because no previous snapshot exists.
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
+
+Top increases:
+- 2327.TW 國巨*: +638,000 (5,362,000 -> 6,000,000)
+- 2454.TW 聯發科: +30,000 (650,000 -> 680,000)
