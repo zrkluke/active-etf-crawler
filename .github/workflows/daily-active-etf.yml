@@ -1,0 +1,61 @@
+name: Daily Active ETF Holdings
+
+on:
+  workflow_dispatch:
+  schedule:
+    # GitHub Actions cron uses UTC. These are fallback windows for
+    # 18:37, 19:13, 20:47, 21:23, and 22:11 Asia/Taipei.
+    - cron: "37 10 * * *"
+    - cron: "13 11 * * *"
+    - cron: "47 12 * * *"
+    - cron: "23 13 * * *"
+    - cron: "11 14 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch holdings and send notification
+        run: python moneydj_etf_holdings.py --notify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_USE_TLS: ${{ secrets.SMTP_USE_TLS }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+
+      - name: Upload CSV artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: active-etf-holdings-data
+          path: data/
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore(data): 更新主動式 ETF 持股資料" -m "更新 MoneyDJ 持股快照、比對結果與最新摘要。"
+            git push
+          fi
