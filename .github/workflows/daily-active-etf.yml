@@ -1,4 +1,4 @@
-name: Daily 00981A Holdings
+name: Daily Active ETF Holdings
 
 on:
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
           python-version: "3.12"
 
       - name: Fetch holdings and send notification
-        run: python moneydj_00981a_holdings.py --notify
+        run: python moneydj_etf_holdings.py --notify
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -45,7 +45,7 @@ jobs:
       - name: Upload CSV artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: 00981a-holdings-data
+          name: active-etf-holdings-data
           path: data/
 
       - name: Commit updated data
@@ -56,6 +56,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
-            git commit -m "Update 00981A holdings data"
+            git commit -m "chore(data): 更新主動式 ETF 持股資料" -m "更新 MoneyDJ 持股快照、比對結果與最新摘要。"
             git push
           fi

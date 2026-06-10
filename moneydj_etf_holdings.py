@@ -17,9 +17,14 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
-ETF_ID = "00981A.TW"
-DEFAULT_URL = "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid=00981A.TW"
 DEFAULT_OUTPUT_DIR = Path(__file__).resolve().parent / "data"
+MONEYDJ_HOLDINGS_URL = "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid={symbol}"
+
+
+@dataclass(frozen=True)
+class EtfConfig:
+    symbol: str
+    url: str
 
 
 @dataclass(frozen=True)
@@ -32,12 +37,26 @@ class Holding:
 
 @dataclass(frozen=True)
 class RunResult:
+    etf_symbol: str
     data_date: str
     holdings_count: int
     snapshot_path: Path
     comparison_path: Path | None
     summary_path: Path
     is_new_snapshot: bool
+
+
+@dataclass(frozen=True)
+class RunFailure:
+    etf_symbol: str
+    error: str
+    summary_path: Path
+
+
+DEFAULT_ETFS = tuple(
+    EtfConfig(symbol, MONEYDJ_HOLDINGS_URL.format(symbol=symbol))
+    for symbol in ("00981A.TW", "00991A.TW", "00992A.TW", "00403A.TW")
+)
 
 
 def fetch_html(url: str) -> str:
@@ -100,10 +119,19 @@ def parse_holdings(page_html: str) -> tuple[str, list[Holding]]:
     return data_date, holdings
 
 
-def write_holdings_snapshot(output_dir: Path, data_date: str, holdings: Iterable[Holding]) -> Path:
-    snapshot_dir = output_dir / "snapshots"
+def get_etf_output_dir(output_dir: Path, etf_symbol: str) -> Path:
+    return output_dir / etf_symbol
+
+
+def write_holdings_snapshot(
+    output_dir: Path,
+    etf_symbol: str,
+    data_date: str,
+    holdings: Iterable[Holding],
+) -> Path:
+    snapshot_dir = get_etf_output_dir(output_dir, etf_symbol) / "snapshots"
     snapshot_dir.mkdir(parents=True, exist_ok=True)
-    path = snapshot_dir / f"{ETF_ID}_{data_date}.csv"
+    path = snapshot_dir / f"{etf_symbol}_{data_date}.csv"
 
     with path.open("w", newline="", encoding="utf-8-sig") as file:
         writer = csv.DictWriter(
@@ -130,20 +158,26 @@ def read_snapshot(path: Path) -> dict[str, dict[str, str]]:
         return {row["symbol"]: row for row in csv.DictReader(file)}
 
 
-def find_previous_snapshot(output_dir: Path, data_date: str) -> Path | None:
-    snapshot_dir = output_dir / "snapshots"
+def find_previous_snapshot(output_dir: Path, etf_symbol: str, data_date: str) -> Path | None:
+    snapshot_dir = get_etf_output_dir(output_dir, etf_symbol) / "snapshots"
     if not snapshot_dir.exists():
         return None
 
-    candidates = sorted(snapshot_dir.glob(f"{ETF_ID}_*.csv"))
-    previous = [path for path in candidates if path.stem < f"{ETF_ID}_{data_date}"]
+    candidates = sorted(snapshot_dir.glob(f"{etf_symbol}_*.csv"))
+    previous = [path for path in candidates if path.stem < f"{etf_symbol}_{data_date}"]
     return previous[-1] if previous else None
 
 
-def write_comparison(output_dir: Path, data_date: str, current_path: Path, previous_path: Path) -> Path:
-    comparison_dir = output_dir / "comparisons"
+def write_comparison(
+    output_dir: Path,
+    etf_symbol: str,
+    data_date: str,
+    current_path: Path,
+    previous_path: Path,
+) -> Path:
+    comparison_dir = get_etf_output_dir(output_dir, etf_symbol) / "comparisons"
     comparison_dir.mkdir(parents=True, exist_ok=True)
-    output_path = comparison_dir / f"{ETF_ID}_{data_date}_diff.csv"
+    output_path = comparison_dir / f"{etf_symbol}_{data_date}_diff.csv"
 
     previous = read_snapshot(previous_path)
     current = read_snapshot(current_path)
@@ -220,9 +254,8 @@ def format_row(row: dict[str, str]) -> str:
 
 def build_summary(result: RunResult) -> str:
     lines = [
-        f"00981A holdings update: {result.data_date}",
+        f"{result.etf_symbol} holdings update: {result.data_date}",
         f"Holdings count: {result.holdings_count}",
-        f"Snapshot: {result.snapshot_path}",
     ]
 
     if not result.comparison_path:
@@ -236,17 +269,12 @@ def build_summary(result: RunResult) -> str:
     added = [row for row in changed if row["status"] == "added"]
     removed = [row for row in changed if row["status"] == "removed"]
 
-    lines.extend(
-        [
-            f"Comparison: {result.comparison_path}",
-            (
-                "Changes: "
-                f"{len(increased)} increased, "
-                f"{len(decreased)} decreased, "
-                f"{len(added)} added, "
-                f"{len(removed)} removed"
-            ),
-        ]
+    lines.append(
+        "Changes: "
+        f"{len(increased)} increased, "
+        f"{len(decreased)} decreased, "
+        f"{len(added)} added, "
+        f"{len(removed)} removed"
     )
 
     top_increases = sorted(increased, key=lambda row: int(row["change_shares"]), reverse=True)[:10]
@@ -268,8 +296,32 @@ def build_summary(result: RunResult) -> str:
     return "\n".join(lines)
 
 
-def write_summary(output_dir: Path, summary: str) -> Path:
-    path = output_dir / "latest_summary.txt"
+def build_failure_summary(failure: RunFailure) -> str:
+    return "\n".join(
+        [
+            f"{failure.etf_symbol} holdings update failed",
+            f"Error: {failure.error}",
+        ]
+    )
+
+
+def build_combined_summary(results: list[RunResult], failures: list[RunFailure]) -> str:
+    if len(results) == 1 and not failures:
+        return build_summary(results[0])
+    if len(failures) == 1 and not results:
+        return build_failure_summary(failures[0])
+
+    lines = ["Active ETF holdings update"]
+    for result in results:
+        lines.append("")
+        lines.append(build_summary(result))
+    for failure in failures:
+        lines.append("")
+        lines.append(build_failure_summary(failure))
+    return "\n".join(lines)
+
+
+def write_summary(path: Path, summary: str) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(summary + "\n", encoding="utf-8")
     return path
@@ -290,7 +342,7 @@ def send_telegram(summary: str) -> bool:
     return True
 
 
-def send_email(summary: str) -> bool:
+def send_email(subject: str, summary: str) -> bool:
     host = os.getenv("SMTP_HOST")
     username = os.getenv("SMTP_USERNAME")
     password = os.getenv("SMTP_PASSWORD")
@@ -303,7 +355,7 @@ def send_email(summary: str) -> bool:
         return False
 
     message = EmailMessage()
-    message["Subject"] = "00981A daily holdings update"
+    message["Subject"] = subject
     message["From"] = mail_from
     message["To"] = mail_to
     message.set_content(summary)
@@ -317,65 +369,122 @@ def send_email(summary: str) -> bool:
     return True
 
 
-def notify(summary: str) -> list[str]:
+def notify(subject: str, summary: str) -> list[str]:
     sent: list[str] = []
     if send_telegram(summary):
         sent.append("telegram")
-    if send_email(summary):
+    if send_email(subject, summary):
         sent.append("email")
     return sent
 
 
-def run(url: str, output_dir: Path) -> RunResult:
-    page_html = fetch_html(url)
+def resolve_etfs(selected_symbols: list[str] | None) -> list[EtfConfig]:
+    if not selected_symbols:
+        return list(DEFAULT_ETFS)
+
+    by_symbol = {etf.symbol: etf for etf in DEFAULT_ETFS}
+    unknown = sorted(set(selected_symbols) - set(by_symbol))
+    if unknown:
+        raise ValueError(f"Unknown ETF symbol(s): {', '.join(unknown)}")
+
+    return [by_symbol[symbol] for symbol in selected_symbols]
+
+
+def run_etf(etf: EtfConfig, output_dir: Path) -> RunResult:
+    page_html = fetch_html(etf.url)
     data_date, holdings = parse_holdings(page_html)
 
-    previous_path = find_previous_snapshot(output_dir, data_date)
-    expected_snapshot_path = output_dir / "snapshots" / f"{ETF_ID}_{data_date}.csv"
+    previous_path = find_previous_snapshot(output_dir, etf.symbol, data_date)
+    expected_snapshot_path = (
+        get_etf_output_dir(output_dir, etf.symbol) / "snapshots" / f"{etf.symbol}_{data_date}.csv"
+    )
     is_new_snapshot = not expected_snapshot_path.exists()
-    current_path = write_holdings_snapshot(output_dir, data_date, holdings)
+    current_path = write_holdings_snapshot(output_dir, etf.symbol, data_date, holdings)
     comparison_path = (
-        write_comparison(output_dir, data_date, current_path, previous_path)
+        write_comparison(output_dir, etf.symbol, data_date, current_path, previous_path)
         if previous_path
         else None
     )
+    summary_path = get_etf_output_dir(output_dir, etf.symbol) / "latest_summary.txt"
+
     result = RunResult(
+        etf_symbol=etf.symbol,
         data_date=data_date,
         holdings_count=len(holdings),
         snapshot_path=current_path,
         comparison_path=comparison_path,
-        summary_path=output_dir / "latest_summary.txt",
+        summary_path=summary_path,
         is_new_snapshot=is_new_snapshot,
     )
-    summary_path = write_summary(output_dir, build_summary(result))
+    write_summary(summary_path, build_summary(result))
+    return result
 
-    return RunResult(
-        data_date=result.data_date,
-        holdings_count=result.holdings_count,
-        snapshot_path=result.snapshot_path,
-        comparison_path=result.comparison_path,
-        summary_path=summary_path,
-        is_new_snapshot=result.is_new_snapshot,
-    )
+
+def run_all(etfs: list[EtfConfig], output_dir: Path) -> tuple[list[RunResult], list[RunFailure]]:
+    results: list[RunResult] = []
+    failures: list[RunFailure] = []
+
+    for etf in etfs:
+        try:
+            results.append(run_etf(etf, output_dir))
+        except Exception as exc:
+            failure = RunFailure(
+                etf_symbol=etf.symbol,
+                error=str(exc),
+                summary_path=get_etf_output_dir(output_dir, etf.symbol) / "latest_summary.txt",
+            )
+            write_summary(failure.summary_path, build_failure_summary(failure))
+            failures.append(failure)
+
+    return results, failures
+
+
+def notify_results(results: list[RunResult], failures: list[RunFailure]) -> list[str]:
+    notifications: list[str] = []
+
+    for result in results:
+        if not result.is_new_snapshot:
+            continue
+        summary = result.summary_path.read_text(encoding="utf-8")
+        sent = notify(f"{result.etf_symbol} daily holdings update", summary)
+        notifications.append(f"{result.etf_symbol}: {', '.join(sent) if sent else 'skipped'}")
+
+    for failure in failures:
+        summary = failure.summary_path.read_text(encoding="utf-8")
+        sent = notify(f"{failure.etf_symbol} holdings update failed", summary)
+        notifications.append(f"{failure.etf_symbol}: {', '.join(sent) if sent else 'skipped'}")
+
+    return notifications
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Fetch 00981A MoneyDJ holdings and compare snapshots.")
-    parser.add_argument("--url", default=DEFAULT_URL, help="MoneyDJ ETF holdings URL.")
+    parser = argparse.ArgumentParser(description="Fetch MoneyDJ ETF holdings and compare snapshots.")
+    parser.add_argument(
+        "--etf",
+        action="append",
+        dest="etfs",
+        choices=[etf.symbol for etf in DEFAULT_ETFS],
+        help="ETF symbol to fetch. Repeat to fetch multiple ETFs. Defaults to all tracked ETFs.",
+    )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR, help="Output directory.")
     parser.add_argument("--notify", action="store_true", help="Send Telegram/email notification when secrets are configured.")
     args = parser.parse_args()
 
     try:
-        result = run(args.url, args.output_dir)
-        summary = result.summary_path.read_text(encoding="utf-8")
-        print(summary)
+        etfs = resolve_etfs(args.etfs)
+        results, failures = run_all(etfs, args.output_dir)
+        summary = build_combined_summary(results, failures)
+        summary_path = write_summary(args.output_dir / "latest_summary.txt", summary)
+        print(summary_path.read_text(encoding="utf-8"))
+
         if args.notify:
-            if result.is_new_snapshot:
-                sent = notify(summary)
-                print(f"notifications: {', '.join(sent) if sent else 'skipped, no notification secrets configured'}")
+            if any(result.is_new_snapshot for result in results) or failures:
+                sent = notify_results(results, failures)
+                print(f"notifications: {'; '.join(sent) if sent else 'skipped, no notification secrets configured'}")
             else:
-                print("notifications: skipped, snapshot already exists for this data date")
+                print("notifications: skipped, snapshots already exist for these data dates")
+        if failures and not results:
+            return 1
     except Exception as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1

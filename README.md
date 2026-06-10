@@ -1,31 +1,54 @@
-# ActiveETF 00981A holdings tracker
+# Active ETF holdings tracker
 
-This project fetches the MoneyDJ 00981A holdings page, writes a daily CSV snapshot,
-compares it with the previous snapshot, and can send a Telegram or email summary.
+This project fetches MoneyDJ holdings pages for tracked active ETFs, writes daily
+CSV snapshots, compares each ETF with its previous snapshot, and can send a
+Telegram or email summary.
+
+Tracked ETFs:
+
+- `00981A.TW`
+- `00991A.TW`
+- `00992A.TW`
+- `00403A.TW`
 
 ## Run locally
 
 ```powershell
-python .\moneydj_00981a_holdings.py
+python .\moneydj_etf_holdings.py
+```
+
+Fetch one ETF:
+
+```powershell
+python .\moneydj_etf_holdings.py --etf 00981A.TW
 ```
 
 Outputs:
 
-- `data/snapshots/00981A.TW_YYYY-MM-DD.csv`
-- `data/comparisons/00981A.TW_YYYY-MM-DD_diff.csv`
+- `data/<ETF_SYMBOL>/snapshots/<ETF_SYMBOL>_YYYY-MM-DD.csv`
+- `data/<ETF_SYMBOL>/comparisons/<ETF_SYMBOL>_YYYY-MM-DD_diff.csv`
+- `data/<ETF_SYMBOL>/latest_summary.txt`
 - `data/latest_summary.txt`
 
 The first run only creates a snapshot. A comparison file is created once a previous
-snapshot exists.
+snapshot exists for that ETF.
 
 ## GitHub Actions schedule
 
-The workflow is in `.github/workflows/daily-00981a.yml`.
+The workflow is in `.github/workflows/daily-active-etf.yml`.
 
 It runs every day at `18:37`, `19:13`, `20:47`, `21:23`, and `22:11 Asia/Taipei`. GitHub Actions
 scheduled jobs can be delayed or occasionally dropped, so the later entries are
-fallback windows. The script only sends a notification when the MoneyDJ data date
-creates a new snapshot, so fallback runs do not send duplicate messages.
+fallback windows. The script only sends a notification when at least one tracked
+ETF creates a new MoneyDJ data-date snapshot, so fallback runs do not send
+duplicate messages.
+
+Notifications are sent per ETF. If multiple ETFs have new snapshots, Telegram and
+email receive one message per ETF instead of one combined message.
+
+ETF fetch errors are isolated. If one ETF fails, the script still writes snapshots
+and summaries for the other ETFs, records the failed ETF in `data/latest_summary.txt`,
+and sends a separate failure notification when notification secrets are configured.
 
 ```yaml
 schedule:
@@ -39,7 +62,7 @@ schedule:
 It also supports manual runs from the GitHub Actions page with `workflow_dispatch`.
 
 The workflow commits updated `data/` files back into the repository, so the next
-scheduled run can compare against the previous snapshot.
+scheduled run can compare each ETF against its previous snapshot.
 
 ## Telegram notification
 
@@ -51,7 +74,7 @@ Add these repository secrets in GitHub:
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
 
-If both secrets are set, the workflow sends a Telegram summary.
+If both secrets are set, the workflow sends Telegram summaries per ETF.
 
 ## Email notification
 
@@ -72,7 +95,7 @@ For Gmail, use:
 - `SMTP_USE_TLS`: `true`
 - `SMTP_PASSWORD`: a Google App Password, not your normal Google password
 
-If all required SMTP secrets are set, the workflow sends an email summary.
+If all required SMTP secrets are set, the workflow sends email summaries per ETF.
 
 ## Disable the old Windows scheduled task
 
