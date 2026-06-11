@@ -1,44 +1,50 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-06-10
+00981A.TW holdings update: 2026-06-11
 Holdings count: 50
 Changes: 2 increased, 1 decreased, 0 added, 0 removed
 
 Top increases:
-- 2327.TW 國巨*: +1,200,000 (18,313,000 -> 19,513,000)
-- 6274.TW 台燿: +120,000 (4,643,000 -> 4,763,000)
+- 2327.TW 國巨*: +1,655,000 (19,513,000 -> 21,168,000)
+- 3665.TW 貿聯-KY: +80,000 (4,703,848 -> 4,783,848)
 
 Top decreases:
-- 2382.TW 廣達: -421,000 (422,000 -> 1,000)
+- 1319.TW 東陽: -233,000 (511,000 -> 278,000)
 
-00991A.TW holdings update: 2026-06-10
+00991A.TW holdings update: 2026-06-11
 Holdings count: 50
-Changes: 2 increased, 0 decreased, 0 added, 0 removed
+Changes: 4 increased, 1 decreased, 0 added, 0 removed
 
 Top increases:
-- 2327.TW 國巨*: +638,000 (5,362,000 -> 6,000,000)
-- 2454.TW 聯發科: +30,000 (650,000 -> 680,000)
-
-00992A.TW holdings update: 2026-06-10
-Holdings count: 42
-Changes: 0 increased, 3 decreased, 0 added, 2 removed
+- 2327.TW 國巨*: +150,000 (6,000,000 -> 6,150,000)
+- 2454.TW 聯發科: +30,000 (680,000 -> 710,000)
+- 2059.TW 川湖: +20,000 (215,000 -> 235,000)
+- 6223.TW 旺矽: +20,000 (350,000 -> 370,000)
 
 Top decreases:
-- 4991.TW 環宇-KY: -394,000 (394,000 -> 0)
-- 6510.TW 精測: -129,000 (129,000 -> 0)
-- 6669.TW 緯穎: -91,000 (319,000 -> 228,000)
+- 8046.TW 南電: -150,000 (1,750,000 -> 1,600,000)
 
-00403A.TW holdings update: 2026-06-10
-Holdings count: 50
-Changes: 5 increased, 2 decreased, 0 added, 0 removed
+00992A.TW holdings update: 2026-06-11
+Holdings count: 40
+Changes: 1 increased, 2 decreased, 0 added, 2 removed
 
 Top increases:
-- 2327.TW 國巨*: +1,000,000 (8,760,000 -> 9,760,000)
-- 6274.TW 台燿: +100,000 (1,420,000 -> 1,520,000)
-- 8996.TW 高力: +100,000 (1,234,000 -> 1,334,000)
-- 2454.TW 聯發科: +60,000 (1,110,000 -> 1,170,000)
-- 6223.TW 旺矽: +40,000 (830,000 -> 870,000)
+- 3017.TW 奇鋐: +200,000 (809,000 -> 1,009,000)
 
 Top decreases:
-- 3044.TW 健鼎: -199,000 (200,000 -> 1,000)
-- 4979.TW 華星光: -45,000 (1,200,000 -> 1,155,000)
+- 6274.TW 台燿: -441,000 (441,000 -> 0)
+- 5274.TW 信驊: -29,000 (29,000 -> 0)
+
+00403A.TW holdings update: 2026-06-11
+Holdings count: 50
+Changes: 4 increased, 2 decreased, 0 added, 0 removed
+
+Top increases:
+- 1303.TW 南亞: +1,700,000 (5,300,000 -> 7,000,000)
+- 1560.TW 中砂: +262,000 (78,000 -> 340,000)
+- 2327.TW 國巨*: +140,000 (9,760,000 -> 9,900,000)
+- 4958.TW 臻鼎-KY: +108,000 (5,492,000 -> 5,600,000)
+
+Top decreases:
+- 4979.TW 華星光: -155,000 (1,155,000 -> 1,000,000)
+- 3081.TW 聯亞: -30,000 (720,000 -> 690,000)

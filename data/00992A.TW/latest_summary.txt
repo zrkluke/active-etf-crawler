@@ -1,8 +1,10 @@
-00992A.TW holdings update: 2026-06-10
-Holdings count: 42
-Changes: 0 increased, 3 decreased, 0 added, 2 removed
+00992A.TW holdings update: 2026-06-11
+Holdings count: 40
+Changes: 1 increased, 2 decreased, 0 added, 2 removed
+
+Top increases:
+- 3017.TW 奇鋐: +200,000 (809,000 -> 1,009,000)
 
 Top decreases:
-- 4991.TW 環宇-KY: -394,000 (394,000 -> 0)
-- 6510.TW 精測: -129,000 (129,000 -> 0)
-- 6669.TW 緯穎: -91,000 (319,000 -> 228,000)
+- 6274.TW 台燿: -441,000 (441,000 -> 0)
+- 5274.TW 信驊: -29,000 (29,000 -> 0)
