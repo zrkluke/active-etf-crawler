@@ -1,8 +1,6 @@
-00992A.TW holdings update: 2026-06-12
-Holdings count: 41
-Changes: 3 increased, 0 decreased, 1 added, 0 removed
+00992A.TW holdings update: 2026-06-15
+Holdings count: 42
+Changes: 1 increased, 0 decreased, 1 added, 0 removed
 
 Top increases:
-- 8021.TW 尖點: +1,000,000 (501,000 -> 1,501,000)
-- 3008.TW 大立光: +135,000 (125,000 -> 260,000)
-- 3264.TW 欣銓: +72,000 (0 -> 72,000)
+- 2303.TW 聯電: +2,000,000 (0 -> 2,000,000)
