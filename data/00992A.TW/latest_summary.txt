@@ -1,6 +1,6 @@
-00992A.TW holdings update: 2026-06-15
-Holdings count: 42
-Changes: 1 increased, 0 decreased, 1 added, 0 removed
+00992A.TW holdings update: 2026-06-16
+Holdings count: 41
+Changes: 0 increased, 1 decreased, 0 added, 1 removed
 
-Top increases:
-- 2303.TW 聯電: +2,000,000 (0 -> 2,000,000)
+Top decreases:
+- 6669.TW 緯穎: -228,000 (228,000 -> 0)

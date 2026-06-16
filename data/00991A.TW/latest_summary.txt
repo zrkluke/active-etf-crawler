@@ -1,12 +1,7 @@
-00991A.TW holdings update: 2026-06-15
+00991A.TW holdings update: 2026-06-16
 Holdings count: 50
-Changes: 4 increased, 1 decreased, 0 added, 0 removed
-
-Top increases:
-- 2408.TW 南亞科: +300,000 (8,000,000 -> 8,300,000)
-- 6274.TW 台燿: +70,000 (1,280,000 -> 1,350,000)
-- 2454.TW 聯發科: +30,000 (710,000 -> 740,000)
-- 2383.TW 台光電: +20,000 (800,000 -> 820,000)
+Changes: 0 increased, 2 decreased, 0 added, 0 removed
 
 Top decreases:
-- 6805.TW 富世達: -539,000 (540,000 -> 1,000)
+- 3017.TW 奇鋐: -150,000 (900,000 -> 750,000)
+- 6669.TW 緯穎: -100,000 (350,000 -> 250,000)

@@ -1,12 +1,10 @@
-00981A.TW holdings update: 2026-06-15
-Holdings count: 51
-Changes: 4 increased, 1 decreased, 1 added, 1 removed
+00981A.TW holdings update: 2026-06-16
+Holdings count: 50
+Changes: 2 increased, 1 decreased, 0 added, 1 removed
 
 Top increases:
-- 2303.TW 聯電: +1,500,000 (75,890,000 -> 77,390,000)
-- 6488.TW 環球晶: +350,000 (0 -> 350,000)
-- 2454.TW 聯發科: +212,000 (4,649,000 -> 4,861,000)
-- 6147.TW 頎邦: +100,000 (5,775,000 -> 5,875,000)
+- 2327.TW 國巨*: +1,624,000 (21,168,000 -> 22,792,000)
+- 6271.TW 同欣電: +400,000 (1,066,000 -> 1,466,000)
 
 Top decreases:
-- 1319.TW 東陽: -278,000 (278,000 -> 0)
+- 2404.TW 漢唐: -1,200,000 (1,200,000 -> 0)
