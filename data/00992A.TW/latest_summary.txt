@@ -1,7 +1,9 @@
-00992A.TW holdings update: 2026-06-17
+00992A.TW holdings update: 2026-06-18
 Holdings count: 40
-Changes: 0 increased, 2 decreased, 0 added, 1 removed
+Changes: 1 increased, 1 decreased, 0 added, 0 removed
+
+Top increases:
+- 3008.TW 大立光: +120,000 (260,000 -> 380,000)
 
 Top decreases:
-- 8046.TW 南電: -718,000 (718,000 -> 0)
-- 2360.TW 致茂: -150,000 (200,000 -> 50,000)
+- 2330.TW 台積電: -300,000 (1,706,000 -> 1,406,000)
