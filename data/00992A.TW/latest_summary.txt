@@ -1,9 +1,7 @@
-00992A.TW holdings update: 2026-06-23
-Holdings count: 39
-Changes: 0 increased, 4 decreased, 0 added, 1 removed
+00992A.TW holdings update: 2026-06-24
+Holdings count: 37
+Changes: 0 increased, 2 decreased, 0 added, 2 removed
 
 Top decreases:
-- 2308.TW 台達電: -120,000 (344,000 -> 224,000)
-- 3653.TW 健策: -82,000 (214,000 -> 132,000)
-- 3661.TW 世芯-KY: -47,000 (262,000 -> 215,000)
-- 7769.TW 鴻勁: -1,000 (1,000 -> 0)
+- 2308.TW 台達電: -224,000 (224,000 -> 0)
+- 3653.TW 健策: -132,000 (132,000 -> 0)
