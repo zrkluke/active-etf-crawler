@@ -1,10 +1,9 @@
-00981A.TW holdings update: 2026-06-26
+00981A.TW holdings update: 2026-06-29
 Holdings count: 38
-Changes: 0 increased, 5 decreased, 0 added, 1 removed
+Changes: 1 increased, 1 decreased, 0 added, 0 removed
+
+Top increases:
+- 6223.TW 旺矽: +15,000 (2,352,000 -> 2,367,000)
 
 Top decreases:
-- 2449.TW 京元電子: -2,003,000 (6,484,000 -> 4,481,000)
-- 3711.TW 日月光投控: -1,416,000 (14,158,000 -> 12,742,000)
-- 4966.TW 譜瑞-KY: -526,000 (1,642,000 -> 1,116,000)
-- 8996.TW 高力: -354,000 (354,000 -> 0)
-- 6515.TW 穎崴: -32,000 (313,000 -> 281,000)
+- 6510.TW 精測: -100,000 (930,000 -> 830,000)
