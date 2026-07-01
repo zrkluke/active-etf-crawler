@@ -1,8 +1,6 @@
-00991A.TW holdings update: 2026-06-30
+00991A.TW holdings update: 2026-07-01
 Holdings count: 29
-Changes: 3 increased, 0 decreased, 0 added, 0 removed
+Changes: 1 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 2303.TW 聯電: +1,000,000 (13,000,000 -> 14,000,000)
-- 6274.TW 台燿: +100,000 (1,700,000 -> 1,800,000)
-- 2345.TW 智邦: +30,000 (970,000 -> 1,000,000)
+- 2454.TW 聯發科: +50,000 (850,000 -> 900,000)
