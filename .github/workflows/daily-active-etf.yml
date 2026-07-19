@@ -29,6 +29,13 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Network Diagnostics
+        run: |
+          echo "==== Testing connection to MoneyDJ (urllib) ===="
+          python -c "import urllib.request; urllib.request.urlopen('https://www.moneydj.com', timeout=5)" && echo "urllib success" || echo "urllib failed"
+          echo "==== Testing connection to MoneyDJ (curl) ===="
+          curl -I -m 5 https://www.moneydj.com || echo "curl failed"
+
       - name: Fetch holdings and send notification
         run: python moneydj_etf_holdings.py --notify
         env:
