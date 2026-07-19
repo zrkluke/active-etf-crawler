@@ -105,3 +105,8 @@ to be the only scheduler, run:
 ```powershell
 Unregister-ScheduledTask -TaskName "ActiveETF 00981A MoneyDJ Daily Holdings" -Confirm:$false
 ```
+
+## 故障診斷與反爬蟲技術筆記
+
+關於本專案於 2026-07-19 遇到的 MoneyDJ 防火牆 Rate Limit 阻擋故障排查過程與解決決策，請參閱詳細記錄：
+- [docs/2026-07-19_anti_scraping_troubleshooting.md](docs/2026-07-19_anti_scraping_troubleshooting.md)

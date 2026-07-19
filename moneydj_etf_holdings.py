@@ -5,9 +5,11 @@ import csv
 import html
 import json
 import os
+import random
 import re
 import smtplib
 import sys
+import time
 from dataclasses import dataclass
 from datetime import datetime
 from email.message import EmailMessage
@@ -59,7 +61,7 @@ DEFAULT_ETFS = tuple(
 )
 
 
-def fetch_html(url: str) -> str:
+def fetch_html(url: str, max_retries: int = 3, retry_delay: float = 10.0) -> str:
     request = Request(
         url,
         headers={
@@ -72,14 +74,21 @@ def fetch_html(url: str) -> str:
         },
     )
 
-    try:
-        with urlopen(request, timeout=30) as response:
-            raw = response.read()
-            charset = response.headers.get_content_charset() or "utf-8"
-    except (HTTPError, URLError, TimeoutError) as exc:
-        raise RuntimeError(f"Failed to fetch MoneyDJ page: {exc}") from exc
+    last_exc = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            with urlopen(request, timeout=30) as response:
+                raw = response.read()
+                charset = response.headers.get_content_charset() or "utf-8"
+            return raw.decode(charset, errors="replace")
+        except (HTTPError, URLError, TimeoutError) as exc:
+            last_exc = exc
+            if attempt < max_retries:
+                backoff = retry_delay * (2 ** (attempt - 1)) + random.uniform(0.0, 3.0)
+                print(f"WARNING: Fetch failed (attempt {attempt}/{max_retries}): {exc}. Retrying in {backoff:.2f}s...")
+                time.sleep(backoff)
 
-    return raw.decode(charset, errors="replace")
+    raise RuntimeError(f"Failed to fetch MoneyDJ page after {max_retries} attempts: {last_exc}") from last_exc
 
 
 def strip_tags(value: str) -> str:
@@ -424,7 +433,12 @@ def run_all(etfs: list[EtfConfig], output_dir: Path) -> tuple[list[RunResult], l
     results: list[RunResult] = []
     failures: list[RunFailure] = []
 
-    for etf in etfs:
+    for i, etf in enumerate(etfs):
+        if i > 0:
+            delay = random.uniform(3.0, 7.0)
+            print(f"Waiting {delay:.2f} seconds before fetching {etf.symbol}...")
+            time.sleep(delay)
+
         try:
             results.append(run_etf(etf, output_dir))
         except Exception as exc:

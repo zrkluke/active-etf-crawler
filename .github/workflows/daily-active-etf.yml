@@ -24,20 +24,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
         with:
           python-version: "3.12"
 
       - name: Network Diagnostics
         run: |
           echo "==== Testing connection to MoneyDJ (urllib) ===="
-          python -c "import urllib.request; urllib.request.urlopen('https://www.moneydj.com', timeout=5)" && echo "urllib success" || echo "urllib failed"
+          uv run python -c "import urllib.request; urllib.request.urlopen('https://www.moneydj.com', timeout=5)" && echo "urllib success" || echo "urllib failed"
           echo "==== Testing connection to MoneyDJ (curl) ===="
           curl -I -m 5 https://www.moneydj.com || echo "curl failed"
 
       - name: Fetch holdings and send notification
-        run: python moneydj_etf_holdings.py --notify
+        run: uv run moneydj_etf_holdings.py --notify
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
