@@ -64,6 +64,8 @@ def main() -> int:
         rr_summary = ""
         mb_summary = ""
         header = ""
+        market_sent_path = args.output_dir / "market_sent.txt"
+        already_sent = False
         
         # Determine if today is a trading day by checking the retail ratio
         try:
@@ -72,6 +74,16 @@ def main() -> int:
             header = f"\U0001F4CA \u3010\u4eca\u65e5\u5927\u76e4\u8207\u5546\u54c1\u6578\u64da\u3011({date_str})"
             # 👥 微台指散戶多空比: {ratio:+.2f}%
             rr_summary = f"\U0001F465 \u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4: {ratio:+.2f}%"
+            
+            # Read fixed marker file and compare the date content
+            if market_sent_path.exists():
+                try:
+                    last_sent_date = market_sent_path.read_text(encoding="utf-8").strip()
+                    if last_sent_date == date_str:
+                        already_sent = True
+                        print(f"Market and commodities notification already sent today ({date_str}) according to {market_sent_path}. Skipping.")
+                except Exception as read_err:
+                    print(f"WARNING: Failed to read {market_sent_path}: {read_err}", file=sys.stderr)
         except ValueError as ve:
             if "No trading data" in str(ve):
                 # It is a non-trading day (weekend or holiday). Skip sending notification completely.
@@ -84,13 +96,12 @@ def main() -> int:
             # Network or parsing errors: we still proceed but note the failure
             rr_summary = f"\U0001F465 \u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4: \u6293\u53d6\u5931\u6557 ({e})"
 
-        if is_trading_day:
+        if is_trading_day and not already_sent:
             mc_summary = fetch_market_and_commodities_summary()
             mb_summary = fetch_margin_balance_summary()
             
             # Combine all pieces
             parts = [header, mc_summary, rr_summary, mb_summary]
-            # Filter out empty strings just in case
             combined_summary = "\n".join([p for p in parts if p])
             
             print(combined_summary)
@@ -99,6 +110,13 @@ def main() -> int:
                 sent_tg = send_telegram(combined_summary)
                 if sent_tg:
                     print("Market, commodities, and margin balance Telegram notification sent successfully.")
+                    # Write/Overwrite the fixed marker file with today's data date
+                    try:
+                        market_sent_path.parent.mkdir(parents=True, exist_ok=True)
+                        market_sent_path.write_text(date_str, encoding="utf-8")
+                        print(f"Updated market sent marker file: {market_sent_path} with date {date_str}")
+                    except Exception as marker_err:
+                        print(f"WARNING: Failed to write marker file {market_sent_path}: {marker_err}", file=sys.stderr)
                 else:
                     print("Market, commodities, and margin balance Telegram notification skipped (Telegram secrets not configured).")
         
