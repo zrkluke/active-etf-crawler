@@ -19,7 +19,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 
-DEFAULT_OUTPUT_DIR = Path(__file__).resolve().parent / "data"
+DEFAULT_OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data"
 MONEYDJ_HOLDINGS_URL = "https://www.moneydj.com/ETF/X/Basic/Basic0007B.xdjhtm?etfid={symbol}"
 
 

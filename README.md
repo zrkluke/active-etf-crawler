@@ -14,13 +14,13 @@ Tracked ETFs:
 ## Run locally
 
 ```powershell
-python .\moneydj_etf_holdings.py
+python .\main.py
 ```
 
 Fetch one ETF:
 
 ```powershell
-python .\moneydj_etf_holdings.py --etf 00981A.TW
+python .\main.py --etf 00981A.TW
 ```
 
 Outputs:
@@ -108,5 +108,7 @@ Unregister-ScheduledTask -TaskName "ActiveETF 00981A MoneyDJ Daily Holdings" -Co
 
 ## 故障診斷與反爬蟲技術筆記
 
-關於本專案於 2026-07-19 遇到的 MoneyDJ 防火牆 Rate Limit 阻擋故障排查過程與解決決策，請參閱詳細記錄：
-- [docs/2026-07-19_anti_scraping_troubleshooting.md](docs/2026-07-19_anti_scraping_troubleshooting.md)
+關於本專案的防阻擋決策與爬蟲規格技術細節，請參閱以下文件：
+- [docs/2026-07-19_anti_scraping_troubleshooting.md](docs/2026-07-19_anti_scraping_troubleshooting.md) (MoneyDJ 防火牆排查記錄)
+- [docs/market_data_crawler_specs.md](docs/market_data_crawler_specs.md) (每日大盤與商品數據爬蟲技術規格)
+

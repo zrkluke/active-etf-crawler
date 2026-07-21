@@ -45,7 +45,7 @@ jobs:
           curl -I -m 5 https://www.moneydj.com || echo "curl failed"
 
       - name: Fetch holdings and send notification
-        run: uv run moneydj_etf_holdings.py --notify
+        run: uv run main.py --notify
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
