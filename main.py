@@ -62,7 +62,6 @@ def main() -> int:
     try:
         is_trading_day = True
         rr_summary = ""
-        mb_summary = ""
         header = ""
         market_sent_path = args.output_dir / "market_sent.txt"
         already_sent = False
@@ -97,28 +96,32 @@ def main() -> int:
             rr_summary = f"\U0001F465 \u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4: \u6293\u53d6\u5931\u6557 ({e})"
 
         if is_trading_day and not already_sent:
-            mc_summary = fetch_market_and_commodities_summary()
-            mb_summary = fetch_margin_balance_summary()
-            
-            # Combine all pieces
-            parts = [header, mc_summary, rr_summary, mb_summary]
-            combined_summary = "\n".join([p for p in parts if p])
-            
-            print(combined_summary)
-            
-            if args.notify:
-                sent_tg = send_telegram(combined_summary)
-                if sent_tg:
-                    print("Market, commodities, and margin balance Telegram notification sent successfully.")
-                    # Write/Overwrite the fixed marker file with today's data date
-                    try:
-                        market_sent_path.parent.mkdir(parents=True, exist_ok=True)
-                        market_sent_path.write_text(date_str, encoding="utf-8")
-                        print(f"Updated market sent marker file: {market_sent_path} with date {date_str}")
-                    except Exception as marker_err:
-                        print(f"WARNING: Failed to write marker file {market_sent_path}: {marker_err}", file=sys.stderr)
-                else:
-                    print("Market, commodities, and margin balance Telegram notification skipped (Telegram secrets not configured).")
+            try:
+                mc_summary = fetch_market_and_commodities_summary()
+                # Strict check: raise ValueError if margin balance is not ready yet
+                mb_summary = fetch_margin_balance_summary(raise_on_error=True)
+                
+                # Combine all pieces
+                parts = [header, mc_summary, rr_summary, mb_summary]
+                combined_summary = "\n".join([p for p in parts if p])
+                
+                print(combined_summary)
+                
+                if args.notify:
+                    sent_tg = send_telegram(combined_summary)
+                    if sent_tg:
+                        print("Market, commodities, and margin balance Telegram notification sent successfully.")
+                        # Write/Overwrite the fixed marker file with today's data date
+                        try:
+                            market_sent_path.parent.mkdir(parents=True, exist_ok=True)
+                            market_sent_path.write_text(date_str, encoding="utf-8")
+                            print(f"Updated market sent marker file: {market_sent_path} with date {date_str}")
+                        except Exception as marker_err:
+                            print(f"WARNING: Failed to write marker file {market_sent_path}: {marker_err}", file=sys.stderr)
+                    else:
+                        print("Market, commodities, and margin balance Telegram notification skipped (Telegram secrets not configured).")
+            except ValueError as m_err:
+                print(f"Market/Commodity data incomplete ({m_err}). Skipping Telegram notification for now to allow fallback runs to retry.")
         
         mc_failed = False
     except Exception as exc:

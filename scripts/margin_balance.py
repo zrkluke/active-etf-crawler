@@ -103,10 +103,10 @@ def fetch_tpex_margin(date_str_yyyymmdd: str) -> tuple[float, float]:
     
     return today / 100000, change / 100000
 
-def fetch_margin_balance_summary() -> str:
+def fetch_margin_balance_summary(raise_on_error: bool = True) -> str:
     """
     Fetches listed & OTC margin balances and returns formatted lines (Style A).
-    Using Unicode escapes for all Chinese and Emojis to guarantee compatibility.
+    If raise_on_error is True, raises ValueError if either TWSE or TPEx data is not available yet.
     """
     today = get_taipei_today()
     date_str_twse = today.strftime("%Y%m%d")
@@ -119,6 +119,8 @@ def fetch_margin_balance_summary() -> str:
         twse_val, twse_change = fetch_twse_margin(date_str_twse)
         lines.append(f"\U0001F4B0 \u4e0a\u5e02\u878d\u8cc7\u9918\u984d: {twse_val:,.2f} \u5104 (\u589e\u6e1b: {twse_change:+,.2f} \u5104)")
     except Exception as e:
+        if raise_on_error:
+            raise ValueError(f"\u4e0a\u5e02\u878d\u8cc7\u9918\u984d\u5c1a\u672a\u516c\u4f48 ({e})")
         lines.append(f"\U0001F4B0 \u4e0a\u5e02\u878d\u8cc7\u9918\u984d: \u6293\u53d6\u5931\u6557 ({e})")
         
     # 2. TPEx (OTC) - 💰 上櫃融資餘額
@@ -126,6 +128,8 @@ def fetch_margin_balance_summary() -> str:
         tpex_val, tpex_change = fetch_tpex_margin(date_str_tpex)
         lines.append(f"\U0001F4B0 \u4e0a\u6ac3\u878d\u8cc7\u9918\u984d: {tpex_val:,.2f} \u5104 (\u589e\u6e1b: {tpex_change:+,.2f} \u5104)")
     except Exception as e:
+        if raise_on_error:
+            raise ValueError(f"\u4e0a\u6ac3\u878d\u8cc7\u9918\u984d\u5c1a\u672a\u516c\u4f48 ({e})")
         lines.append(f"\U0001F4B0 \u4e0a\u6ac3\u878d\u8cc7\u9918\u984d: \u6293\u53d6\u5931\u6557 ({e})")
         
     return "\n".join(lines)
@@ -133,4 +137,4 @@ def fetch_margin_balance_summary() -> str:
 if __name__ == "__main__":
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    print(fetch_margin_balance_summary())
+    print(fetch_margin_balance_summary(raise_on_error=False))
