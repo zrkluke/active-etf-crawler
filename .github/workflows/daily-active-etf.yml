@@ -4,12 +4,11 @@ on:
   workflow_dispatch:
   schedule:
     # GitHub Actions cron uses UTC. These are fallback windows for
-    # 18:37, 19:13, 20:47, 21:23, and 22:11 Asia/Taipei.
-    - cron: "37 10 * * *"
-    - cron: "13 11 * * *"
-    - cron: "47 12 * * *"
-    - cron: "23 13 * * *"
+    # 21:07, 21:37, 22:11, and 22:47 Asia/Taipei (after TWSE/TPEx publish margin data ~21:00).
+    - cron: "7 13 * * *"
+    - cron: "37 13 * * *"
     - cron: "11 14 * * *"
+    - cron: "47 14 * * *"
 
 permissions:
   contents: write
