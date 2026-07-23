@@ -1,6 +1,4 @@
-00992A.TW holdings update: 2026-07-22
+00992A.TW holdings update: 2026-07-23
 Holdings count: 36
-Changes: 0 increased, 1 decreased, 0 added, 0 removed
-
-Top decreases:
-- 6515.TW 穎崴: -57,000 (99,000 -> 42,000)
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
