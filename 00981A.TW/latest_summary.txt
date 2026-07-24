@@ -1,10 +1,6 @@
-00981A.TW holdings update: 2026-07-23
-Holdings count: 36
-Changes: 1 increased, 2 decreased, 0 added, 0 removed
+00981A.TW holdings update: 2026-07-24
+Holdings count: 37
+Changes: 1 increased, 0 decreased, 1 added, 0 removed
 
 Top increases:
-- 6805.TW 富世達: +50,000 (1,881,000 -> 1,931,000)
-
-Top decreases:
-- 2368.TW 金像電: -837,000 (8,315,000 -> 7,478,000)
-- 6147.TW 頎邦: -523,000 (5,229,000 -> 4,706,000)
+- 4979.TW 華星光: +1,874,000 (0 -> 1,874,000)
