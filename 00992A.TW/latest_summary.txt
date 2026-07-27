@@ -1,12 +1,7 @@
-00992A.TW holdings update: 2026-07-24
+00992A.TW holdings update: 2026-07-27
 Holdings count: 38
-Changes: 3 increased, 2 decreased, 2 added, 0 removed
-
-Top increases:
-- 3231.TW 緯創: +3,496,000 (0 -> 3,496,000)
-- 8021.TW 尖點: +1,000,000 (1,501,000 -> 2,501,000)
-- 6669.TW 緯穎: +77,000 (0 -> 77,000)
+Changes: 0 increased, 2 decreased, 0 added, 0 removed
 
 Top decreases:
-- 2327.TW 國巨*: -139,000 (2,066,000 -> 1,927,000)
-- 7751.TW 竑騰: -8,000 (318,000 -> 310,000)
+- 2327.TW 國巨*: -680,000 (1,927,000 -> 1,247,000)
+- 8299.TW 群聯: -79,000 (445,000 -> 366,000)
