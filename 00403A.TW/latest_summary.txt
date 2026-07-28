@@ -1,9 +1,11 @@
-00403A.TW holdings update: 2026-07-27
+00403A.TW holdings update: 2026-07-28
 Holdings count: 47
-Changes: 4 increased, 0 decreased, 1 added, 0 removed
+Changes: 3 increased, 1 decreased, 0 added, 0 removed
 
 Top increases:
-- 1560.TW 中砂: +250,000 (750,000 -> 1,000,000)
-- 3450.TW 聯鈞: +200,000 (0 -> 200,000)
-- 3665.TW 貿聯-KY: +70,000 (680,000 -> 750,000)
-- 2383.TW 台光電: +30,000 (1,330,000 -> 1,360,000)
+- 3450.TW 聯鈞: +100,000 (200,000 -> 300,000)
+- 3665.TW 貿聯-KY: +75,000 (750,000 -> 825,000)
+- 3008.TW 大立光: +20,000 (60,000 -> 80,000)
+
+Top decreases:
+- 6415.TW 矽力*-KY: -66,000 (900,000 -> 834,000)

@@ -1,6 +1,10 @@
-00981A.TW holdings update: 2026-07-27
+00981A.TW holdings update: 2026-07-28
 Holdings count: 37
-Changes: 0 increased, 1 decreased, 0 added, 0 removed
+Changes: 1 increased, 2 decreased, 0 added, 0 removed
+
+Top increases:
+- 2449.TW 京元電子: +354,450 (7,089,000 -> 7,443,450)
 
 Top decreases:
-- 5439.TW 高技: -366,000 (2,646,000 -> 2,280,000)
+- 2330.TW 台積電: -1,100,000 (11,840,000 -> 10,740,000)
+- 5439.TW 高技: -694,000 (2,280,000 -> 1,586,000)
