@@ -1,4 +1,10 @@
-00991A.TW holdings update: 2026-07-28
-Holdings count: 26
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+00991A.TW holdings update: 2026-07-29
+Holdings count: 23
+Changes: 0 increased, 5 decreased, 0 added, 3 removed
+
+Top decreases:
+- 2303.TW 聯電: -10,000,000 (10,000,000 -> 0)
+- 1303.TW 南亞: -6,000,000 (6,000,000 -> 0)
+- 6515.TW 穎崴: -70,000 (210,000 -> 140,000)
+- 2368.TW 金像電: -9,000 (9,000 -> 0)
+- 2404.TW 漢唐: -1,000 (800,000 -> 799,000)
