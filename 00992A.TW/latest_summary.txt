@@ -1,12 +1,10 @@
-00992A.TW holdings update: 2026-08-03
-Holdings count: 39
-Changes: 3 increased, 2 decreased, 3 added, 1 removed
+00992A.TW holdings update: 2026-08-04
+Holdings count: 38
+Changes: 2 increased, 1 decreased, 0 added, 1 removed
 
 Top increases:
-- 1303.TW 南亞: +5,445,000 (0 -> 5,445,000)
-- 4958.TW 臻鼎-KY: +1,000,000 (0 -> 1,000,000)
-- 1815.TW 富喬: +827,000 (0 -> 827,000)
+- 1815.TW 富喬: +950,000 (827,000 -> 1,777,000)
+- 3037.TW 欣興: +400,000 (2,097,000 -> 2,497,000)
 
 Top decreases:
-- 3026.TW 禾伸堂: -303,000 (518,000 -> 215,000)
-- 3363.TW 上詮: -100,000 (100,000 -> 0)
+- 3026.TW 禾伸堂: -215,000 (215,000 -> 0)
