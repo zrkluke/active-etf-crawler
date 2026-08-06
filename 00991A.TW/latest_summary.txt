@@ -1,10 +1,10 @@
-00991A.TW holdings update: 2026-08-05
-Holdings count: 24
-Changes: 5 increased, 0 decreased, 0 added, 0 removed
+00991A.TW holdings update: 2026-08-06
+Holdings count: 23
+Changes: 2 increased, 1 decreased, 0 added, 1 removed
 
 Top increases:
-- 3231.TW 緯創: +1,000,000 (8,000,000 -> 9,000,000)
-- 2408.TW 南亞科: +500,000 (13,500,000 -> 14,000,000)
-- 3653.TW 健策: +65,000 (260,000 -> 325,000)
-- 3665.TW 貿聯-KY: +60,000 (700,000 -> 760,000)
-- 3017.TW 奇鋐: +50,000 (1,150,000 -> 1,200,000)
+- 3189.TW 景碩: +400,000 (3,200,000 -> 3,600,000)
+- 6274.TW 台燿: +150,000 (2,150,000 -> 2,300,000)
+
+Top decreases:
+- 2881.TW 富邦金: -3,200,000 (3,200,000 -> 0)

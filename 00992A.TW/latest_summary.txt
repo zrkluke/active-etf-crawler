@@ -1,11 +1,11 @@
-00992A.TW holdings update: 2026-08-05
+00992A.TW holdings update: 2026-08-06
 Holdings count: 37
-Changes: 1 increased, 3 decreased, 0 added, 1 removed
+Changes: 2 increased, 2 decreased, 0 added, 0 removed
 
 Top increases:
-- 1815.TW 富喬: +4,500,000 (1,777,000 -> 6,277,000)
+- 3189.TW 景碩: +400,000 (440,013 -> 840,013)
+- 3665.TW 貿聯-KY: +170,000 (991,000 -> 1,161,000)
 
 Top decreases:
-- 6187.TW 萬潤: -400,000 (1,220,000 -> 820,000)
-- 6488.TW 環球晶: -394,000 (394,000 -> 0)
-- 2383.TW 台光電: -97,000 (563,000 -> 466,000)
+- 7751.TW 竑騰: -40,000 (310,000 -> 270,000)
+- 6187.TW 萬潤: -19,000 (820,000 -> 801,000)
