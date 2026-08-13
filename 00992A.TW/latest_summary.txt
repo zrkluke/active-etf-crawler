@@ -1,10 +1,7 @@
-00992A.TW holdings update: 2026-08-12
-Holdings count: 37
-Changes: 1 increased, 2 decreased, 1 added, 0 removed
-
-Top increases:
-- 8046.TW 南電: +300,000 (0 -> 300,000)
+00992A.TW holdings update: 2026-08-13
+Holdings count: 36
+Changes: 0 increased, 2 decreased, 0 added, 1 removed
 
 Top decreases:
-- 6187.TW 萬潤: -400,000 (801,000 -> 401,000)
-- 7751.TW 竑騰: -75,000 (257,000 -> 182,000)
+- 6187.TW 萬潤: -401,000 (401,000 -> 0)
+- 7751.TW 竑騰: -33,000 (182,000 -> 149,000)
