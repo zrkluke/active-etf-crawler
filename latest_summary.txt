@@ -1,60 +1,36 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-08-13
+00981A.TW holdings update: 2026-08-14
 Holdings count: 50
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
+
+00991A.TW holdings update: 2026-08-14
+Holdings count: 50
+Changes: 1 increased, 2 decreased, 0 added, 0 removed
 
 Top increases:
-- 3264.TW 欣銓: +2,838,000 (3,080,000 -> 5,918,000)
-- 2345.TW 智邦: +175,000 (6,419,000 -> 6,594,000)
+- 6669.TW 緯穎: +30,000 (570,000 -> 600,000)
 
 Top decreases:
-- 6515.TW 穎崴: -10,000 (23,000 -> 13,000)
+- 3711.TW 日月光投控: -500,000 (3,400,000 -> 2,900,000)
+- 8299.TW 群聯: -300,000 (1,300,000 -> 1,000,000)
 
-00991A.TW holdings update: 2026-08-13
-Holdings count: 50
-Changes: 29 increased, 2 decreased, 28 added, 0 removed
-
-Top increases:
-- 3081.TW 聯亞: +292,000 (208,000 -> 500,000)
-- 2880.TW 華南金: +9,090 (0 -> 9,090)
-- 2317.TW 鴻海: +9,000 (0 -> 9,000)
-- 2382.TW 廣達: +9,000 (0 -> 9,000)
-- 2603.TW 長榮: +9,000 (0 -> 9,000)
-- 2881.TW 富邦金: +9,000 (0 -> 9,000)
-- 2882.TW 國泰金: +9,000 (0 -> 9,000)
-- 2883.TW 凱基金: +9,000 (0 -> 9,000)
-- 2884.TW 玉山金: +9,000 (0 -> 9,000)
-- 2885.TW 元大金: +9,000 (0 -> 9,000)
-
-Top decreases:
-- 3711.TW 日月光投控: -1,200,000 (4,600,000 -> 3,400,000)
-- 2330.TW 台積電: -200,000 (5,200,000 -> 5,000,000)
-
-00992A.TW holdings update: 2026-08-13
+00992A.TW holdings update: 2026-08-14
 Holdings count: 36
-Changes: 0 increased, 2 decreased, 0 added, 1 removed
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
 
-Top decreases:
-- 6187.TW 萬潤: -401,000 (401,000 -> 0)
-- 7751.TW 竑騰: -33,000 (182,000 -> 149,000)
-
-00403A.TW holdings update: 2026-08-13
+00403A.TW holdings update: 2026-08-14
 Holdings count: 50
-Changes: 6 increased, 6 decreased, 0 added, 0 removed
+Changes: 5 increased, 1 decreased, 0 added, 0 removed
 
 Top increases:
-- 2327.TW 國巨*: +785,000 (9,000,000 -> 9,785,000)
-- 2481.TW 強茂: +400,000 (1,100,000 -> 1,500,000)
-- 8046.TW 南電: +395,000 (1,795,000 -> 2,190,000)
-- 2360.TW 致茂: +103,000 (897,000 -> 1,000,000)
-- 3008.TW 大立光: +48,000 (462,000 -> 510,000)
-- 2454.TW 聯發科: +40,000 (2,000,000 -> 2,040,000)
+- 1303.TW 南亞: +421,000 (7,000,000 -> 7,421,000)
+- 6669.TW 緯穎: +110,000 (500,000 -> 610,000)
+- 2454.TW 聯發科: +70,000 (2,040,000 -> 2,110,000)
+- 3008.TW 大立光: +60,000 (510,000 -> 570,000)
+- 2383.TW 台光電: +55,000 (1,635,000 -> 1,690,000)
 
 Top decreases:
-- 2344.TW 華邦電: -14,300,000 (42,300,000 -> 28,000,000)
-- 2049.TW 上銀: -1,009,000 (1,010,000 -> 1,000)
-- 2330.TW 台積電: -680,000 (12,680,000 -> 12,000,000)
-- 3533.TW 嘉澤: -190,000 (1,240,000 -> 1,050,000)
-- 6415.TW 矽力*-KY: -149,000 (150,000 -> 1,000)
-- 3583.TW 辛耘: -100,000 (900,000 -> 800,000)
+- 3533.TW 嘉澤: -250,000 (1,050,000 -> 800,000)

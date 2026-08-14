@@ -1,10 +1,4 @@
-00981A.TW holdings update: 2026-08-13
+00981A.TW holdings update: 2026-08-14
 Holdings count: 50
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
-
-Top increases:
-- 3264.TW 欣銓: +2,838,000 (3,080,000 -> 5,918,000)
-- 2345.TW 智邦: +175,000 (6,419,000 -> 6,594,000)
-
-Top decreases:
-- 6515.TW 穎崴: -10,000 (23,000 -> 13,000)
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
