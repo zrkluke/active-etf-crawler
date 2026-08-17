@@ -1,36 +1,46 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-08-14
+00981A.TW holdings update: 2026-08-17
 Holdings count: 50
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
-
-00991A.TW holdings update: 2026-08-14
-Holdings count: 50
-Changes: 1 increased, 2 decreased, 0 added, 0 removed
+Changes: 2 increased, 2 decreased, 0 added, 0 removed
 
 Top increases:
-- 6669.TW 緯穎: +30,000 (570,000 -> 600,000)
+- 8996.TW 高力: +300,000 (802,000 -> 1,102,000)
+- 3037.TW 欣興: +120,000 (20,210,000 -> 20,330,000)
 
 Top decreases:
-- 3711.TW 日月光投控: -500,000 (3,400,000 -> 2,900,000)
-- 8299.TW 群聯: -300,000 (1,300,000 -> 1,000,000)
+- 2368.TW 金像電: -500,000 (4,000,000 -> 3,500,000)
+- 6515.TW 穎崴: -12,000 (13,000 -> 1,000)
 
-00992A.TW holdings update: 2026-08-14
+00991A.TW holdings update: 2026-08-17
+Holdings count: 50
+Changes: 1 increased, 1 decreased, 0 added, 0 removed
+
+Top increases:
+- 3081.TW 聯亞: +80,000 (500,000 -> 580,000)
+
+Top decreases:
+- 3231.TW 緯創: -8,991,000 (9,000,000 -> 9,000)
+
+00992A.TW holdings update: 2026-08-17
 Holdings count: 36
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
-
-00403A.TW holdings update: 2026-08-14
-Holdings count: 50
-Changes: 5 increased, 1 decreased, 0 added, 0 removed
-
-Top increases:
-- 1303.TW 南亞: +421,000 (7,000,000 -> 7,421,000)
-- 6669.TW 緯穎: +110,000 (500,000 -> 610,000)
-- 2454.TW 聯發科: +70,000 (2,040,000 -> 2,110,000)
-- 3008.TW 大立光: +60,000 (510,000 -> 570,000)
-- 2383.TW 台光電: +55,000 (1,635,000 -> 1,690,000)
+Changes: 0 increased, 3 decreased, 0 added, 0 removed
 
 Top decreases:
-- 3533.TW 嘉澤: -250,000 (1,050,000 -> 800,000)
+- 7751.TW 竑騰: -124,000 (149,000 -> 25,000)
+- 2059.TW 川湖: -33,000 (293,000 -> 260,000)
+- 2383.TW 台光電: -1,000 (466,000 -> 465,000)
+
+00403A.TW holdings update: 2026-08-17
+Holdings count: 50
+Changes: 3 increased, 3 decreased, 0 added, 0 removed
+
+Top increases:
+- 1303.TW 南亞: +1,579,000 (7,421,000 -> 9,000,000)
+- 8046.TW 南電: +450,000 (2,190,000 -> 2,640,000)
+- 3008.TW 大立光: +56,000 (570,000 -> 626,000)
+
+Top decreases:
+- 2337.TW 旺宏: -1,498,000 (7,498,000 -> 6,000,000)
+- 3533.TW 嘉澤: -100,000 (800,000 -> 700,000)
+- 8358.TW 金居: -100,000 (900,000 -> 800,000)
