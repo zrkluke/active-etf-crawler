@@ -1,9 +1,11 @@
-00991A.TW holdings update: 2026-08-17
+00991A.TW holdings update: 2026-08-18
 Holdings count: 50
-Changes: 1 increased, 1 decreased, 0 added, 0 removed
+Changes: 2 increased, 2 decreased, 0 added, 0 removed
 
 Top increases:
-- 3081.TW 聯亞: +80,000 (500,000 -> 580,000)
+- 3081.TW 聯亞: +80,000 (580,000 -> 660,000)
+- 2885.TW 元大金: +360 (9,000 -> 9,360)
 
 Top decreases:
-- 3231.TW 緯創: -8,991,000 (9,000,000 -> 9,000)
+- 6223.TW 旺矽: -60,000 (720,000 -> 660,000)
+- 2454.TW 聯發科: -50,000 (1,150,000 -> 1,100,000)
