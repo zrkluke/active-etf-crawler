@@ -1,10 +1,7 @@
-00992A.TW holdings update: 2026-08-19
+00992A.TW holdings update: 2026-08-20
 Holdings count: 41
-Changes: 0 increased, 5 decreased, 0 added, 4 removed
+Changes: 0 increased, 2 decreased, 0 added, 0 removed
 
 Top decreases:
-- 3583.TW 辛耘: -147,000 (147,000 -> 0)
-- 2454.TW 聯發科: -140,000 (406,000 -> 266,000)
-- 3264.TW 欣銓: -72,000 (72,000 -> 0)
-- 6515.TW 穎崴: -42,000 (42,000 -> 0)
-- 7751.TW 竑騰: -25,000 (25,000 -> 0)
+- 3008.TW 大立光: -77,000 (420,000 -> 343,000)
+- 3037.TW 欣興: -1,000 (2,483,000 -> 2,482,000)
