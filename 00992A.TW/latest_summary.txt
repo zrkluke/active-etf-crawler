@@ -1,7 +1,4 @@
-00992A.TW holdings update: 2026-08-20
+00992A.TW holdings update: 2026-08-21
 Holdings count: 41
-Changes: 0 increased, 2 decreased, 0 added, 0 removed
-
-Top decreases:
-- 3008.TW 大立光: -77,000 (420,000 -> 343,000)
-- 3037.TW 欣興: -1,000 (2,483,000 -> 2,482,000)
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
