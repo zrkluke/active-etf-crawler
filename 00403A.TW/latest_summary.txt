@@ -1,10 +1,6 @@
-00403A.TW holdings update: 2026-08-21
+00403A.TW holdings update: 2026-08-24
 Holdings count: 50
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
+Changes: 1 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 6274.TW 台燿: +120,000 (1,680,000 -> 1,800,000)
-- 3443.TW 創意: +60,000 (550,000 -> 610,000)
-
-Top decreases:
-- 2481.TW 強茂: -699,000 (700,000 -> 1,000)
+- 2059.TW 川湖: +15,000 (20,000 -> 35,000)

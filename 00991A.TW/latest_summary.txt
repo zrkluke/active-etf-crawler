@@ -1,8 +1,4 @@
-00991A.TW holdings update: 2026-08-21
+00991A.TW holdings update: 2026-08-24
 Holdings count: 50
-Changes: 0 increased, 3 decreased, 0 added, 0 removed
-
-Top decreases:
-- 2345.TW 智邦: -50,000 (1,800,000 -> 1,750,000)
-- 2383.TW 台光電: -30,000 (1,430,000 -> 1,400,000)
-- 7769.TW 鴻勁: -20,000 (400,000 -> 380,000)
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
