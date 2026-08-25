@@ -1,32 +1,32 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-08-24
-Holdings count: 50
-Changes: 4 increased, 2 decreased, 0 added, 0 removed
-
-Top increases:
-- 2303.TW 聯電: +2,000,000 (87,518,000 -> 89,518,000)
-- 8996.TW 高力: +200,000 (1,101,000 -> 1,301,000)
-- 3443.TW 創意: +113,000 (142,000 -> 255,000)
-- 3653.TW 健策: +12,000 (2,395,000 -> 2,407,000)
-
-Top decreases:
-- 2637.TW 慧洋-KY: -199,000 (200,000 -> 1,000)
-- 5274.TW 信驊: -27,000 (410,900 -> 383,900)
-
-00991A.TW holdings update: 2026-08-24
+00981A.TW holdings update: 2026-08-25
 Holdings count: 50
 Changes: 0 increased, 0 decreased, 0 added, 0 removed
 No share-count changes versus the previous snapshot.
 
-00992A.TW holdings update: 2026-08-24
+00991A.TW holdings update: 2026-08-25
+Holdings count: 50
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
+
+00992A.TW holdings update: 2026-08-25
 Holdings count: 41
 Changes: 0 increased, 0 decreased, 0 added, 0 removed
 No share-count changes versus the previous snapshot.
 
-00403A.TW holdings update: 2026-08-24
+00403A.TW holdings update: 2026-08-25
 Holdings count: 50
-Changes: 1 increased, 0 decreased, 0 added, 0 removed
+Changes: 5 increased, 3 decreased, 0 added, 0 removed
 
 Top increases:
-- 2059.TW 川湖: +15,000 (20,000 -> 35,000)
+- 1303.TW 南亞: +1,000,000 (9,000,000 -> 10,000,000)
+- 8996.TW 高力: +120,000 (1,600,000 -> 1,720,000)
+- 3017.TW 奇鋐: +100,000 (3,000,000 -> 3,100,000)
+- 6805.TW 富世達: +80,000 (700,000 -> 780,000)
+- 6669.TW 緯穎: +20,000 (610,000 -> 630,000)
+
+Top decreases:
+- 3450.TW 聯鈞: -1,400,000 (1,800,000 -> 400,000)
+- 4966.TW 譜瑞-KY: -280,000 (500,000 -> 220,000)
+- 3533.TW 嘉澤: -225,000 (525,000 -> 300,000)

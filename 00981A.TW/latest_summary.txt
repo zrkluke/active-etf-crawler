@@ -1,13 +1,4 @@
-00981A.TW holdings update: 2026-08-24
+00981A.TW holdings update: 2026-08-25
 Holdings count: 50
-Changes: 4 increased, 2 decreased, 0 added, 0 removed
-
-Top increases:
-- 2303.TW 聯電: +2,000,000 (87,518,000 -> 89,518,000)
-- 8996.TW 高力: +200,000 (1,101,000 -> 1,301,000)
-- 3443.TW 創意: +113,000 (142,000 -> 255,000)
-- 3653.TW 健策: +12,000 (2,395,000 -> 2,407,000)
-
-Top decreases:
-- 2637.TW 慧洋-KY: -199,000 (200,000 -> 1,000)
-- 5274.TW 信驊: -27,000 (410,900 -> 383,900)
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
