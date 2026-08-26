@@ -1,4 +1,7 @@
-00981A.TW holdings update: 2026-08-25
+00981A.TW holdings update: 2026-08-26
 Holdings count: 50
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
+
+Top increases:
+- 3017.TW 奇鋐: +80,000 (5,899,000 -> 5,979,000)
+- 3443.TW 創意: +70,000 (255,000 -> 325,000)
