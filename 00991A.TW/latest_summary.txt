@@ -1,9 +1,9 @@
-00991A.TW holdings update: 2026-08-26
+00991A.TW holdings update: 2026-08-27
 Holdings count: 50
-Changes: 0 increased, 4 decreased, 0 added, 0 removed
+Changes: 1 increased, 1 decreased, 0 added, 0 removed
+
+Top increases:
+- 3081.TW 聯亞: +100,000 (700,000 -> 800,000)
 
 Top decreases:
-- 2330.TW 台積電: -300,000 (4,500,000 -> 4,200,000)
-- 6223.TW 旺矽: -100,000 (660,000 -> 560,000)
-- 2345.TW 智邦: -50,000 (1,750,000 -> 1,700,000)
-- 7769.TW 鴻勁: -20,000 (380,000 -> 360,000)
+- 6223.TW 旺矽: -100,000 (560,000 -> 460,000)
