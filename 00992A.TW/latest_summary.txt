@@ -1,6 +1,6 @@
-00992A.TW holdings update: 2026-08-27
+00992A.TW holdings update: 2026-08-28
 Holdings count: 41
-Changes: 1 increased, 0 decreased, 0 added, 0 removed
+Changes: 0 increased, 1 decreased, 0 added, 0 removed
 
-Top increases:
-- 5289.TW 宜鼎: +1,952 (98,000 -> 99,952)
+Top decreases:
+- 2308.TW 台達電: -250,000 (632,000 -> 382,000)
