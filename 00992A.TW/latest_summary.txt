@@ -1,6 +1,12 @@
-00992A.TW holdings update: 2026-08-28
-Holdings count: 41
-Changes: 0 increased, 1 decreased, 0 added, 0 removed
+00992A.TW holdings update: 2026-08-31
+Holdings count: 40
+Changes: 1 increased, 4 decreased, 0 added, 1 removed
+
+Top increases:
+- 8046.TW 南電: +339,000 (300,000 -> 639,000)
 
 Top decreases:
-- 2308.TW 台達電: -250,000 (632,000 -> 382,000)
+- 3711.TW 日月光投控: -716,000 (716,000 -> 0)
+- 2330.TW 台積電: -190,000 (1,306,000 -> 1,116,000)
+- 2454.TW 聯發科: -121,000 (266,000 -> 145,000)
+- 2059.TW 川湖: -25,000 (260,000 -> 235,000)
