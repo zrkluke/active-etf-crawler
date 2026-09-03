@@ -8,24 +8,25 @@ import sys
 import urllib.parse
 import urllib.request
 
+def get_taipei_now() -> datetime.datetime:
+    """
+    Returns current datetime in Taipei timezone (UTC+8).
+    """
+    utc_now = datetime.datetime.now(datetime.timezone.utc)
+    return utc_now + datetime.timedelta(hours=8)
+
 def get_taipei_today() -> datetime.date:
     """
     Returns current date in Taipei timezone (UTC+8).
     """
-    utc_now = datetime.datetime.now(datetime.timezone.utc)
-    taipei_now = utc_now + datetime.timedelta(hours=8)
-    return taipei_now.date()
+    return get_taipei_now().date()
 
-def fetch_latest_retail_ratio() -> tuple[str, float]:
+def fetch_retail_ratio_for_date(target_date: datetime.date) -> float:
     """
-    Fetches TMF retail long-short ratio strictly for TODAY (Taipei timezone).
-    Does not fall back to previous dates.
-    Returns (date_str_yyyy_mm_dd, ratio_percentage).
+    Fetches TMF retail long-short ratio for a specific date.
+    Raises ValueError if no trading data is available.
     """
-    today = get_taipei_today()
-    # Format as YYYY/MM/DD which is expected by TAIFEX forms
-    date_str = today.strftime("%Y/%m/%d")
-    
+    date_str = target_date.strftime("%Y/%m/%d")
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -112,14 +113,44 @@ def fetch_latest_retail_ratio() -> tuple[str, float]:
         retail_short = total_oi - inst_short
         ratio = ((retail_long - retail_short) / total_oi) * 100
         
-        return date_str, ratio
+        return ratio
+
+def fetch_latest_retail_ratio(target_date: datetime.date | None = None) -> tuple[str, float, datetime.date]:
+    """
+    Fetches TMF retail long-short ratio for the target date or the latest settled trading day.
+    If target_date is not specified:
+      - Before 15:00 Taipei time, starts with yesterday (T-1) since today's post-market data is not ready.
+      - After 15:00 Taipei time, starts with today (T).
+      - Automatically falls back up to 7 days to find the latest trading day (e.g. across weekends/holidays).
+    Returns (date_str_yyyy_mm_dd, ratio_percentage, actual_date).
+    """
+    if target_date is not None:
+        ratio = fetch_retail_ratio_for_date(target_date)
+        return target_date.strftime("%Y/%m/%d"), ratio, target_date
+
+    now = get_taipei_now()
+    if now.hour < 15:
+        curr_date = now.date() - datetime.timedelta(days=1)
+    else:
+        curr_date = now.date()
+
+    last_error = None
+    for _ in range(7):
+        try:
+            ratio = fetch_retail_ratio_for_date(curr_date)
+            return curr_date.strftime("%Y/%m/%d"), ratio, curr_date
+        except ValueError as ve:
+            last_error = ve
+            curr_date -= datetime.timedelta(days=1)
+
+    raise ValueError(f"\u6700\u8fd1 7 \u5929\u7121\u4ea4\u6613\u8cc7\u6599 (No trading data found in last 7 days: {last_error})")
 
 def fetch_retail_ratio_summary() -> str:
     """
     Fetches TMF retail ratio and formats it as a single line string.
     """
     try:
-        date_str, ratio = fetch_latest_retail_ratio()
+        date_str, ratio, _ = fetch_latest_retail_ratio()
         # 微台指散戶多空比
         return f"\u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4 ({date_str}): {ratio:+.2f}%"
     except Exception as e:

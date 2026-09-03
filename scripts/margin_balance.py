@@ -5,13 +5,18 @@ import json
 import sys
 import urllib.request
 
+def get_taipei_now() -> datetime.datetime:
+    """
+    Returns current datetime in Taipei timezone (UTC+8).
+    """
+    utc_now = datetime.datetime.now(datetime.timezone.utc)
+    return utc_now + datetime.timedelta(hours=8)
+
 def get_taipei_today() -> datetime.date:
     """
     Returns current date in Taipei timezone (UTC+8).
     """
-    utc_now = datetime.datetime.now(datetime.timezone.utc)
-    taipei_now = utc_now + datetime.timedelta(hours=8)
-    return taipei_now.date()
+    return get_taipei_now().date()
 
 def fetch_twse_margin(date_str_yyyymmdd: str) -> tuple[float, float]:
     """
@@ -103,14 +108,15 @@ def fetch_tpex_margin(date_str_yyyymmdd: str) -> tuple[float, float]:
     
     return today / 100000, change / 100000
 
-def fetch_margin_balance_summary(raise_on_error: bool = True) -> str:
+def fetch_margin_balance_summary(target_date: datetime.date | None = None, raise_on_error: bool = True) -> str:
     """
     Fetches listed & OTC margin balances and returns formatted lines (Style A).
     If raise_on_error is True, raises ValueError if either TWSE or TPEx data is not available yet.
     """
-    today = get_taipei_today()
-    date_str_twse = today.strftime("%Y%m%d")
-    date_str_tpex = today.strftime("%Y/%m/%d")
+    if target_date is None:
+        target_date = get_taipei_today()
+    date_str_twse = target_date.strftime("%Y%m%d")
+    date_str_tpex = target_date.strftime("%Y/%m/%d")
     
     lines = []
     

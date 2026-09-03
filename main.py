@@ -66,9 +66,10 @@ def main() -> int:
         market_sent_path = args.output_dir / "market_sent.txt"
         already_sent = False
         
-        # Determine if today is a trading day by checking the retail ratio
+        # Determine the latest trading day and ratio
+        target_date = None
         try:
-            date_str, ratio = fetch_latest_retail_ratio()
+            date_str, ratio, target_date = fetch_latest_retail_ratio()
             # 📊 【今日大盤與商品數據】({date_str})
             header = f"\U0001F4CA \u3010\u4eca\u65e5\u5927\u76e4\u8207\u5546\u54c1\u6578\u64da\u3011({date_str})"
             # 👥 微台指散戶多空比: {ratio:+.2f}%
@@ -80,13 +81,13 @@ def main() -> int:
                     last_sent_date = market_sent_path.read_text(encoding="utf-8").strip()
                     if last_sent_date == date_str:
                         already_sent = True
-                        print(f"Market and commodities notification already sent today ({date_str}) according to {market_sent_path}. Skipping.")
+                        print(f"Market and commodities notification already sent for {date_str} according to {market_sent_path}. Skipping.")
                 except Exception as read_err:
                     print(f"WARNING: Failed to read {market_sent_path}: {read_err}", file=sys.stderr)
         except ValueError as ve:
             if "No trading data" in str(ve):
-                # It is a non-trading day (weekend or holiday). Skip sending notification completely.
-                print(f"Today is a non-trading day ({ve}). Skipping market/commodity Telegram notification.")
+                # No trading data in the recent period (e.g. prolonged holiday)
+                print(f"No trading data available ({ve}). Skipping market/commodity Telegram notification.")
                 is_trading_day = False
             else:
                 # Other value errors are treated as errors
@@ -98,8 +99,8 @@ def main() -> int:
         if is_trading_day and not already_sent:
             try:
                 mc_summary = fetch_market_and_commodities_summary()
-                # Strict check: raise ValueError if margin balance is not ready yet
-                mb_summary = fetch_margin_balance_summary(raise_on_error=True)
+                # Strict check: raise ValueError if margin balance for the target date is not ready yet
+                mb_summary = fetch_margin_balance_summary(target_date=target_date, raise_on_error=True)
                 
                 # Combine all pieces
                 parts = [header, mc_summary, rr_summary, mb_summary]
