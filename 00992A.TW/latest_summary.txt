@@ -1,6 +1,6 @@
-00992A.TW holdings update: 2026-09-03
+00992A.TW holdings update: 2026-09-04
 Holdings count: 40
-Changes: 0 increased, 1 decreased, 0 added, 0 removed
+Changes: 1 increased, 0 decreased, 0 added, 0 removed
 
-Top decreases:
-- 2059.TW 川湖: -30,000 (235,000 -> 205,000)
+Top increases:
+- 6669.TW 緯穎: +200,000 (229,675 -> 429,675)
