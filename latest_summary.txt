@@ -1,37 +1,43 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-09-04
+00981A.TW holdings update: 2026-09-07
 Holdings count: 50
-Changes: 2 increased, 0 decreased, 0 added, 0 removed
+Changes: 3 increased, 4 decreased, 0 added, 0 removed
 
 Top increases:
-- 6515.TW 穎崴: +41,000 (54,000 -> 95,000)
-- 3653.TW 健策: +20,000 (2,427,000 -> 2,447,000)
+- 4958.TW 臻鼎-KY: +555,000 (2,157,000 -> 2,712,000)
+- 2454.TW 聯發科: +98,000 (5,088,000 -> 5,186,000)
+- 6510.TW 精測: +76,000 (561,000 -> 637,000)
 
-00991A.TW holdings update: 2026-09-04
+Top decreases:
+- 4979.TW 華星光: -1,260,000 (2,184,000 -> 924,000)
+- 8996.TW 高力: -260,000 (1,300,000 -> 1,040,000)
+- 8210.TW 勤誠: -243,000 (2,427,000 -> 2,184,000)
+- 3665.TW 貿聯-KY: -188,000 (4,591,848 -> 4,403,848)
+
+00991A.TW holdings update: 2026-09-07
 Holdings count: 50
 Changes: 0 increased, 0 decreased, 0 added, 0 removed
 No share-count changes versus the previous snapshot.
 
-00992A.TW holdings update: 2026-09-04
+00992A.TW holdings update: 2026-09-07
 Holdings count: 40
-Changes: 1 increased, 0 decreased, 0 added, 0 removed
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
 
-Top increases:
-- 6669.TW 緯穎: +200,000 (229,675 -> 429,675)
-
-00403A.TW holdings update: 2026-09-04
+00403A.TW holdings update: 2026-09-07
 Holdings count: 50
-Changes: 1 increased, 7 decreased, 0 added, 1 removed
+Changes: 4 increased, 5 decreased, 0 added, 0 removed
 
 Top increases:
-- 2481.TW 強茂: +649,000 (1,351,000 -> 2,000,000)
+- 2303.TW 聯電: +5,000,000 (50,000,000 -> 55,000,000)
+- 2481.TW 強茂: +1,000,000 (2,000,000 -> 3,000,000)
+- 2449.TW 京元電子: +900,000 (1,700,000 -> 2,600,000)
+- 2454.TW 聯發科: +100,000 (2,110,000 -> 2,210,000)
 
 Top decreases:
-- 2344.TW 華邦電: -3,500,000 (5,000,000 -> 1,500,000)
-- 1717.TW 長興: -1,600,000 (3,100,000 -> 1,500,000)
-- 2337.TW 旺宏: -1,000,000 (2,000,000 -> 1,000,000)
-- 2330.TW 台積電: -200,000 (10,500,000 -> 10,300,000)
-- 1560.TW 中砂: -109,000 (300,000 -> 191,000)
-- 3008.TW 大立光: -74,000 (810,000 -> 736,000)
-- 4966.TW 譜瑞-KY: -16,000 (16,000 -> 0)
+- 3711.TW 日月光投控: -500,000 (4,500,000 -> 4,000,000)
+- 2330.TW 台積電: -200,000 (10,300,000 -> 10,100,000)
+- 8996.TW 高力: -157,000 (1,737,000 -> 1,580,000)
+- 3443.TW 創意: -70,000 (650,000 -> 580,000)
+- 3008.TW 大立光: -50,000 (736,000 -> 686,000)
