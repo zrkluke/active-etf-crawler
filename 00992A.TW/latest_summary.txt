@@ -1,4 +1,7 @@
-00992A.TW holdings update: 2026-09-07
-Holdings count: 40
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+00992A.TW holdings update: 2026-09-08
+Holdings count: 39
+Changes: 0 increased, 2 decreased, 0 added, 1 removed
+
+Top decreases:
+- 2455.TW 全新: -603,000 (2,753,000 -> 2,150,000)
+- 2308.TW 台達電: -382,000 (382,000 -> 0)

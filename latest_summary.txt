@@ -1,43 +1,36 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-09-07
+00981A.TW holdings update: 2026-09-08
 Holdings count: 50
-Changes: 3 increased, 4 decreased, 0 added, 0 removed
+Changes: 2 increased, 3 decreased, 0 added, 0 removed
 
 Top increases:
-- 4958.TW 臻鼎-KY: +555,000 (2,157,000 -> 2,712,000)
-- 2454.TW 聯發科: +98,000 (5,088,000 -> 5,186,000)
-- 6510.TW 精測: +76,000 (561,000 -> 637,000)
+- 2330.TW 台積電: +850,000 (11,014,000 -> 11,864,000)
+- 6223.TW 旺矽: +70,000 (2,476,000 -> 2,546,000)
 
 Top decreases:
-- 4979.TW 華星光: -1,260,000 (2,184,000 -> 924,000)
-- 8996.TW 高力: -260,000 (1,300,000 -> 1,040,000)
-- 8210.TW 勤誠: -243,000 (2,427,000 -> 2,184,000)
-- 3665.TW 貿聯-KY: -188,000 (4,591,848 -> 4,403,848)
+- 8996.TW 高力: -295,000 (1,040,000 -> 745,000)
+- 8210.TW 勤誠: -282,000 (2,184,000 -> 1,902,000)
+- 3665.TW 貿聯-KY: -123,000 (4,403,848 -> 4,280,848)
 
-00991A.TW holdings update: 2026-09-07
+00991A.TW holdings update: 2026-09-08
 Holdings count: 50
 Changes: 0 increased, 0 decreased, 0 added, 0 removed
 No share-count changes versus the previous snapshot.
 
-00992A.TW holdings update: 2026-09-07
-Holdings count: 40
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
-
-00403A.TW holdings update: 2026-09-07
-Holdings count: 50
-Changes: 4 increased, 5 decreased, 0 added, 0 removed
-
-Top increases:
-- 2303.TW 聯電: +5,000,000 (50,000,000 -> 55,000,000)
-- 2481.TW 強茂: +1,000,000 (2,000,000 -> 3,000,000)
-- 2449.TW 京元電子: +900,000 (1,700,000 -> 2,600,000)
-- 2454.TW 聯發科: +100,000 (2,110,000 -> 2,210,000)
+00992A.TW holdings update: 2026-09-08
+Holdings count: 39
+Changes: 0 increased, 2 decreased, 0 added, 1 removed
 
 Top decreases:
-- 3711.TW 日月光投控: -500,000 (4,500,000 -> 4,000,000)
-- 2330.TW 台積電: -200,000 (10,300,000 -> 10,100,000)
-- 8996.TW 高力: -157,000 (1,737,000 -> 1,580,000)
-- 3443.TW 創意: -70,000 (650,000 -> 580,000)
-- 3008.TW 大立光: -50,000 (736,000 -> 686,000)
+- 2455.TW 全新: -603,000 (2,753,000 -> 2,150,000)
+- 2308.TW 台達電: -382,000 (382,000 -> 0)
+
+00403A.TW holdings update: 2026-09-08
+Holdings count: 50
+Changes: 0 increased, 3 decreased, 0 added, 0 removed
+
+Top decreases:
+- 3017.TW 奇鋐: -300,000 (3,150,000 -> 2,850,000)
+- 6669.TW 緯穎: -100,000 (2,087,956 -> 1,987,956)
+- 3008.TW 大立光: -86,000 (686,000 -> 600,000)
