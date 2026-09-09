@@ -1,4 +1,12 @@
-00991A.TW holdings update: 2026-09-08
+00991A.TW holdings update: 2026-09-09
 Holdings count: 50
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+Changes: 2 increased, 3 decreased, 0 added, 0 removed
+
+Top increases:
+- 2454.TW 聯發科: +100,000 (900,000 -> 1,000,000)
+- 6223.TW 旺矽: +70,000 (380,000 -> 450,000)
+
+Top decreases:
+- 6274.TW 台燿: -300,000 (1,800,000 -> 1,500,000)
+- 6669.TW 緯穎: -230,000 (1,730,020 -> 1,500,020)
+- 2345.TW 智邦: -100,000 (1,450,000 -> 1,350,000)

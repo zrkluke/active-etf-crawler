@@ -1,8 +1,11 @@
-00403A.TW holdings update: 2026-09-08
+00403A.TW holdings update: 2026-09-09
 Holdings count: 50
-Changes: 0 increased, 3 decreased, 0 added, 0 removed
+Changes: 1 increased, 3 decreased, 0 added, 0 removed
+
+Top increases:
+- 6805.TW 富世達: +110,000 (650,000 -> 760,000)
 
 Top decreases:
-- 3017.TW 奇鋐: -300,000 (3,150,000 -> 2,850,000)
-- 6669.TW 緯穎: -100,000 (2,087,956 -> 1,987,956)
-- 3008.TW 大立光: -86,000 (686,000 -> 600,000)
+- 8358.TW 金居: -200,000 (400,000 -> 200,000)
+- 2330.TW 台積電: -100,000 (10,100,000 -> 10,000,000)
+- 5274.TW 信驊: -70,000 (210,500 -> 140,500)
