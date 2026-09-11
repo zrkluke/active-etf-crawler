@@ -1,11 +1,6 @@
-00403A.TW holdings update: 2026-09-10
+00403A.TW holdings update: 2026-09-11
 Holdings count: 50
-Changes: 0 increased, 6 decreased, 0 added, 0 removed
+Changes: 0 increased, 1 decreased, 0 added, 0 removed
 
 Top decreases:
-- 2337.TW 旺宏: -999,000 (1,000,000 -> 1,000)
-- 2344.TW 華邦電: -500,000 (1,500,000 -> 1,000,000)
-- 2330.TW 台積電: -200,000 (10,000,000 -> 9,800,000)
-- 8358.TW 金居: -100,000 (200,000 -> 100,000)
-- 3533.TW 嘉澤: -50,000 (250,000 -> 200,000)
-- 5274.TW 信驊: -20,000 (140,500 -> 120,500)
+- 3711.TW 日月光投控: -2,000,000 (4,000,000 -> 2,000,000)
