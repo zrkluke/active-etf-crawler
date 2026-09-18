@@ -1,7 +1,6 @@
-00992A.TW holdings update: 2026-09-17
+00992A.TW holdings update: 2026-09-18
 Holdings count: 40
-Changes: 0 increased, 2 decreased, 0 added, 1 removed
+Changes: 1 increased, 0 decreased, 0 added, 0 removed
 
-Top decreases:
-- 2455.TW 全新: -450,000 (2,150,000 -> 1,700,000)
-- 3661.TW 世芯-KY: -215,000 (215,000 -> 0)
+Top increases:
+- 2345.TW 智邦: +30,000 (1,074,000 -> 1,104,000)
