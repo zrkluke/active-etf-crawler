@@ -1,10 +1,6 @@
-00992A.TW holdings update: 2026-09-23
+00992A.TW holdings update: 2026-09-24
 Holdings count: 42
-Changes: 2 increased, 1 decreased, 1 added, 0 removed
-
-Top increases:
-- 6223.TW 旺矽: +76,000 (268,000 -> 344,000)
-- 3131.TW 弘塑: +1,000 (0 -> 1,000)
+Changes: 0 increased, 1 decreased, 0 added, 0 removed
 
 Top decreases:
-- 6584.TW 南俊國際: -18,000 (2,231,000 -> 2,213,000)
+- 1303.TW 南亞: -1,800,000 (5,445,000 -> 3,645,000)
