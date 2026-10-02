@@ -1,9 +1,6 @@
-00991A.TW holdings update: 2026-10-01
+00991A.TW holdings update: 2026-10-02
 Holdings count: 50
-Changes: 1 increased, 1 decreased, 0 added, 0 removed
-
-Top increases:
-- 6505.TW 台塑化: +4,500,000 (4,000,000 -> 8,500,000)
+Changes: 0 increased, 1 decreased, 0 added, 0 removed
 
 Top decreases:
-- 3081.TW 聯亞: -100,000 (900,000 -> 800,000)
+- 3711.TW 日月光投控: -330,000 (2,030,000 -> 1,700,000)

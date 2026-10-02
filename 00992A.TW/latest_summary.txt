@@ -1,6 +1,11 @@
-00992A.TW holdings update: 2026-10-01
+00992A.TW holdings update: 2026-10-02
 Holdings count: 42
-Changes: 0 increased, 1 decreased, 0 added, 0 removed
+Changes: 1 increased, 3 decreased, 0 added, 0 removed
+
+Top increases:
+- 2345.TW 智邦: +100,000 (1,104,000 -> 1,204,000)
 
 Top decreases:
-- 3017.TW 奇鋐: -130,000 (1,001,000 -> 871,000)
+- 2455.TW 全新: -700,000 (1,700,000 -> 1,000,000)
+- 6584.TW 南俊國際: -98,000 (2,213,000 -> 2,115,000)
+- 2059.TW 川湖: -35,000 (205,000 -> 170,000)
