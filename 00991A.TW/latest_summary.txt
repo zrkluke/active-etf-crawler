@@ -1,6 +1,6 @@
-00991A.TW holdings update: 2026-10-07
+00991A.TW holdings update: 2026-10-08
 Holdings count: 50
 Changes: 0 increased, 1 decreased, 0 added, 0 removed
 
 Top decreases:
-- 5274.TW 信驊: -30,000 (140,500 -> 110,500)
+- 2454.TW 聯發科: -50,000 (1,100,000 -> 1,050,000)

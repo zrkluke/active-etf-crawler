@@ -1,47 +1,42 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-10-07
+00981A.TW holdings update: 2026-10-08
 Holdings count: 50
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
+Changes: 3 increased, 3 decreased, 0 added, 0 removed
 
 Top increases:
-- 2368.TW 金像電: +256,000 (3,164,000 -> 3,420,000)
-- 3443.TW 台指期貨 2026/10(FITXN*1.TF)2.32679
-			
-				創意: +96,000 (520,000 -> 616,000)
+- 2330.TW 台積電: +360,000 (11,464,000 -> 11,824,000)
+- 2368.TW 金像電: +321,000 (3,420,000 -> 3,741,000)
+- 3443.TW 創意: +68,000 (616,000 -> 684,000)
 
 Top decreases:
-- 3665.TW 貿聯-KY: -366,000 (3,405,848 -> 3,039,848)
+- 2449.TW 京元電子: -4,482,000 (12,938,450 -> 8,456,450)
+- 3711.TW 台指期貨 2026/10(FITXN*1.TF)2.30679
+			
+				日月光投控: -928,000 (9,276,000 -> 8,348,000)
+- 3037.TW 欣興: -579,000 (19,300,000 -> 18,721,000)
 
-00991A.TW holdings update: 2026-10-07
+00991A.TW holdings update: 2026-10-08
 Holdings count: 50
 Changes: 0 increased, 1 decreased, 0 added, 0 removed
 
 Top decreases:
-- 5274.TW 信驊: -30,000 (140,500 -> 110,500)
+- 2454.TW 聯發科: -50,000 (1,100,000 -> 1,050,000)
 
-00992A.TW holdings update: 2026-10-07
+00992A.TW holdings update: 2026-10-08
 Holdings count: 41
-Changes: 1 increased, 1 decreased, 0 added, 1 removed
+Changes: 0 increased, 0 decreased, 0 added, 0 removed
+No share-count changes versus the previous snapshot.
+
+00403A.TW holdings update: 2026-10-08
+Holdings count: 50
+Changes: 3 increased, 2 decreased, 0 added, 1 removed
 
 Top increases:
-- 2360.TW 致茂: +147,000 (275,000 -> 422,000)
+- 2368.TW 金像電: +160,000 (320,000 -> 480,000)
+- 6274.TW 台燿: +100,000 (2,000,000 -> 2,100,000)
+- 5274.TW 信驊: +22,000 (95,500 -> 117,500)
 
 Top decreases:
-- 2455.TW 全新: -1,000,000 (1,000,000 -> 0)
-
-00403A.TW holdings update: 2026-10-07
-Holdings count: 51
-Changes: 5 increased, 3 decreased, 0 added, 0 removed
-
-Top increases:
-- 1303.TW 南亞: +500,000 (11,000,000 -> 11,500,000)
-- 2327.TW 國巨*: +400,000 (8,400,000 -> 8,800,000)
-- 2368.TW 金像電: +120,000 (200,000 -> 320,000)
-- 6274.TW 台燿: +100,000 (1,900,000 -> 2,000,000)
-- 3443.TW 創意: +20,000 (620,000 -> 640,000)
-
-Top decreases:
-- 2303.TW 聯電: -4,000,000 (24,000,000 -> 20,000,000)
-- 6488.TW 環球晶: -1,224,000 (2,824,000 -> 1,600,000)
-- 8358.TW 金居: -49,000 (50,000 -> 1,000)
+- 6488.TW 環球晶: -800,000 (1,600,000 -> 800,000)
+- 2337.TW 旺宏: -1,000 (1,000 -> 0)
