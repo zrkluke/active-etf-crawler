@@ -1,10 +1,7 @@
-00991A.TW holdings update: 2026-10-19
+00991A.TW holdings update: 2026-10-20
 Holdings count: 50
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 3026.TW 禾伸堂: +200,000 (2,800,000 -> 3,000,000)
-- 3017.TW 奇鋐: +100,000 (1,250,000 -> 1,350,000)
-
-Top decreases:
-- 2327.TW 國巨*: -400,000 (5,800,000 -> 5,400,000)
+- 3008.TW 大立光: +20,000 (150,000 -> 170,000)
+- 2059.TW 川湖: +12,000 (470,000 -> 482,000)

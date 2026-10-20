@@ -1,49 +1,42 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-10-19
-Holdings count: 50
-Changes: 9 increased, 0 decreased, 0 added, 0 removed
+00981A.TW holdings update: 2026-10-20
+Holdings count: 51
+Changes: 6 increased, 0 decreased, 1 added, 0 removed
 
 Top increases:
-- 2449.TW 京元電子: +1,008,000 (4,143,450 -> 5,151,450)
-- 3264.TW 欣銓: +800,000 (1,857,000 -> 2,657,000)
-- 8358.TW 金居: +653,000 (1,000 -> 654,000)
-- 2330.TW 台積電: +204,000 (12,188,000 -> 12,392,000)
-- 2368.TW 金像電: +199,000 (6,700,000 -> 6,899,000)
-- 6805.TW 富世達: +120,000 (649,000 -> 769,000)
-- 3037.TW 欣興: +113,000 (19,386,000 -> 19,499,000)
-- 3443.TW 創意: +101,000 (751,000 -> 852,000)
-- 2308.TW 台達電: +75,000 (7,507,000 -> 7,582,000)
+- 3231.TW 緯創: +4,703,000 (0 -> 4,703,000)
+- 2449.TW 京元電子: +1,200,000 (5,151,450 -> 6,351,450)
+- 2330.TW 台積電: +279,000 (12,392,000 -> 12,671,000)
+- 6805.TW 富世達: +50,000 (769,000 -> 819,000)
+- 3017.TW 奇鋐: +40,000 (6,303,000 -> 6,343,000)
+- 3653.TW 健策: +10,000 (2,502,000 -> 2,512,000)
 
-00991A.TW holdings update: 2026-10-19
+00991A.TW holdings update: 2026-10-20
 Holdings count: 50
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 3026.TW 禾伸堂: +200,000 (2,800,000 -> 3,000,000)
-- 3017.TW 奇鋐: +100,000 (1,250,000 -> 1,350,000)
+- 3008.TW 大立光: +20,000 (150,000 -> 170,000)
+- 2059.TW 川湖: +12,000 (470,000 -> 482,000)
 
-Top decreases:
-- 2327.TW 國巨*: -400,000 (5,800,000 -> 5,400,000)
-
-00992A.TW holdings update: 2026-10-19
-Holdings count: 42
-Changes: 0 increased, 2 decreased, 0 added, 0 removed
-
-Top decreases:
-- 3231.TW 緯創: -2,731,000 (7,185,000 -> 4,454,000)
-- 2383.TW 台光電: -55,000 (475,000 -> 420,000)
-
-00403A.TW holdings update: 2026-10-19
-Holdings count: 50
-Changes: 5 increased, 1 decreased, 0 added, 0 removed
+00992A.TW holdings update: 2026-10-20
+Holdings count: 43
+Changes: 2 increased, 0 decreased, 1 added, 0 removed
 
 Top increases:
-- 2368.TW 金像電: +120,000 (700,000 -> 820,000)
-- 1560.TW 中砂: +109,000 (191,000 -> 300,000)
-- 6274.TW 台燿: +100,000 (2,300,000 -> 2,400,000)
-- 6805.TW 富世達: +60,000 (250,000 -> 310,000)
-- 3443.TW 創意: +25,000 (655,000 -> 680,000)
+- 3264.TW 欣銓: +500,000 (0 -> 500,000)
+- 3026.TW 禾伸堂: +200,000 (367,000 -> 567,000)
+
+00403A.TW holdings update: 2026-10-20
+Holdings count: 50
+Changes: 4 increased, 1 decreased, 0 added, 0 removed
+
+Top increases:
+- 6669.TW 緯穎: +153,000 (1,697,956 -> 1,850,956)
+- 1560.TW 中砂: +100,000 (300,000 -> 400,000)
+- 3017.TW 奇鋐: +60,000 (2,140,000 -> 2,200,000)
+- 2059.TW 川湖: +15,000 (75,000 -> 90,000)
 
 Top decreases:
-- 2454.TW 聯發科: -200,000 (1,700,000 -> 1,500,000)
+- 2303.TW 聯電: -5,000,000 (15,000,000 -> 10,000,000)
