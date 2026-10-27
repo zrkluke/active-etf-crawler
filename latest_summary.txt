@@ -1,34 +1,55 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-10-22
+00981A.TW holdings update: 2026-10-27
 Holdings count: 50
-Changes: 1 increased, 1 decreased, 0 added, 1 removed
+Changes: 7 increased, 2 decreased, 0 added, 0 removed
 
 Top increases:
-- 3711.TW 日月光投控: +547,000 (8,348,000 -> 8,895,000)
+- 3711.TW 日月光投控: +1,073,000 (8,895,000 -> 9,968,000)
+- 2449.TW 京元電子: +969,000 (6,587,450 -> 7,556,450)
+- 2330.TW 台積電: +375,000 (12,671,000 -> 13,046,000)
+- 2454.TW 聯發科: +90,000 (5,143,000 -> 5,233,000)
+- 2368.TW 金像電: +80,000 (6,899,000 -> 6,979,000)
+- 3017.TW 奇鋐: +80,000 (6,457,000 -> 6,537,000)
+- 6805.TW 富世達: +50,000 (919,000 -> 969,000)
 
 Top decreases:
-- 4966.TW 譜瑞-KY: -1,000 (1,000 -> 0)
+- 8210.TW 勤誠: -100,000 (478,000 -> 378,000)
+- 6515.TW 穎崴: -8,000 (93,000 -> 85,000)
 
-00991A.TW holdings update: 2026-10-22
+00991A.TW holdings update: 2026-10-27
 Holdings count: 50
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
 
-00992A.TW holdings update: 2026-10-22
+Top increases:
+- 3711.TW 日月光投控: +300,000 (2,100,000 -> 2,400,000)
+- 1303.TW 南亞: +200,000 (10,000,000 -> 10,200,000)
+
+00992A.TW holdings update: 2026-10-27
 Holdings count: 43
-Changes: 0 increased, 1 decreased, 0 added, 0 removed
-
-Top decreases:
-- 6584.TW 南俊國際: -20,000 (1,904,000 -> 1,884,000)
-
-00403A.TW holdings update: 2026-10-22
-Holdings count: 50
-Changes: 2 increased, 1 decreased, 0 added, 0 removed
+Changes: 10 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 3037.TW 欣興: +200,000 (7,000,000 -> 7,200,000)
-- 3017.TW 奇鋐: +40,000 (2,235,000 -> 2,275,000)
+- 3037.TW 欣興: +200,000 (2,482,000 -> 2,682,000)
+- 8046.TW 南電: +150,000 (1,007,000 -> 1,157,000)
+- 2345.TW 智邦: +100,000 (1,255,000 -> 1,355,000)
+- 3665.TW 貿聯-KY: +100,000 (1,241,000 -> 1,341,000)
+- 6139.TW 亞翔: +85,000 (266,000 -> 351,000)
+- 2330.TW 台積電: +80,000 (1,166,000 -> 1,246,000)
+- 8996.TW 高力: +80,000 (1,663,000 -> 1,743,000)
+- 3081.TW 聯亞: +69,000 (69,000 -> 138,000)
+- 8021.TW 尖點: +58,253 (2,682,000 -> 2,740,253)
+- 5274.TW 信驊: +21,000 (11,000 -> 32,000)
+
+00403A.TW holdings update: 2026-10-27
+Holdings count: 50
+Changes: 4 increased, 1 decreased, 0 added, 0 removed
+
+Top increases:
+- 2883.TW 凱基金: +2,000,000 (2,000,000 -> 4,000,000)
+- 3711.TW 日月光投控: +399,000 (1,000 -> 400,000)
+- 3017.TW 奇鋐: +55,000 (2,275,000 -> 2,330,000)
+- 5274.TW 信驊: +14,000 (156,500 -> 170,500)
 
 Top decreases:
-- 3653.TW 健策: -115,000 (1,115,000 -> 1,000,000)
+- 2303.TW 聯電: -4,000,000 (10,000,000 -> 6,000,000)

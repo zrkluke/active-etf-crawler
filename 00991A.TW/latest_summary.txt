@@ -1,4 +1,7 @@
-00991A.TW holdings update: 2026-10-22
+00991A.TW holdings update: 2026-10-27
 Holdings count: 50
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
+
+Top increases:
+- 3711.TW 日月光投控: +300,000 (2,100,000 -> 2,400,000)
+- 1303.TW 南亞: +200,000 (10,000,000 -> 10,200,000)
