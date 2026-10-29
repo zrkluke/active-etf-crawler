@@ -1,4 +1,10 @@
-00992A.TW holdings update: 2026-10-28
-Holdings count: 43
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+00992A.TW holdings update: 2026-10-29
+Holdings count: 44
+Changes: 2 increased, 1 decreased, 1 added, 0 removed
+
+Top increases:
+- 6415.TW 矽力*-KY: +590,000 (0 -> 590,000)
+- 2383.TW 台光電: +85,000 (420,000 -> 505,000)
+
+Top decreases:
+- 2360.TW 致茂: -13,000 (426,000 -> 413,000)
