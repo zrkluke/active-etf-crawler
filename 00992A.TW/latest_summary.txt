@@ -1,4 +1,7 @@
-00992A.TW holdings update: 2026-11-02
+00992A.TW holdings update: 2026-11-03
 Holdings count: 44
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
+Changes: 2 increased, 0 decreased, 0 added, 0 removed
+
+Top increases:
+- 2308.TW 台達電: +150,000 (200,000 -> 350,000)
+- 2059.TW 川湖: +35,000 (183,000 -> 218,000)
