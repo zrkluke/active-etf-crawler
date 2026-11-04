@@ -1,45 +1,45 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-11-03
+00981A.TW holdings update: 2026-11-04
 Holdings count: 51
-Changes: 2 increased, 2 decreased, 1 added, 0 removed
+Changes: 7 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 1802.TW 台玻: +8,479,000 (0 -> 8,479,000)
-- 2330.TW 台積電: +736,000 (13,728,000 -> 14,464,000)
+- 3711.TW 日月光投控: +1,463,000 (15,442,000 -> 16,905,000)
+- 2330.TW 台積電: +805,000 (14,464,000 -> 15,269,000)
+- 2454.TW 聯發科: +137,000 (5,478,000 -> 5,615,000)
+- 6271.TW 同欣電: +100,000 (2,240,000 -> 2,340,000)
+- 6274.TW 台燿: +50,000 (7,292,000 -> 7,342,000)
+- 3017.TW 奇鋐: +39,000 (6,616,000 -> 6,655,000)
+- 3443.TW 創意: +27,000 (923,000 -> 950,000)
 
-Top decreases:
-- 3376.TW 新日興: -300,000 (1,345,000 -> 1,045,000)
-- 8210.TW 勤誠: -100,000 (241,000 -> 141,000)
-
-00991A.TW holdings update: 2026-11-03
+00991A.TW holdings update: 2026-11-04
 Holdings count: 50
-Changes: 3 increased, 1 decreased, 0 added, 0 removed
+Changes: 4 increased, 0 decreased, 0 added, 0 removed
 
 Top increases:
-- 3711.TW 日月光投控: +500,000 (3,100,000 -> 3,600,000)
-- 1303.TW 南亞: +300,000 (11,200,000 -> 11,500,000)
-- 3017.TW 奇鋐: +30,000 (1,450,000 -> 1,480,000)
+- 3017.TW 奇鋐: +20,000 (1,480,000 -> 1,500,000)
+- 2454.TW 聯發科: +15,000 (1,065,000 -> 1,080,000)
+- 2059.TW 川湖: +10,000 (485,000 -> 495,000)
+- 2890.TW 永豐金: +311 (9,000 -> 9,311)
 
-Top decreases:
-- 3081.TW 聯亞: -200,000 (800,000 -> 600,000)
-
-00992A.TW holdings update: 2026-11-03
+00992A.TW holdings update: 2026-11-04
 Holdings count: 44
-Changes: 2 increased, 0 decreased, 0 added, 0 removed
+Changes: 1 increased, 1 decreased, 0 added, 0 removed
 
 Top increases:
-- 2308.TW 台達電: +150,000 (200,000 -> 350,000)
-- 2059.TW 川湖: +35,000 (183,000 -> 218,000)
-
-00403A.TW holdings update: 2026-11-03
-Holdings count: 50
-Changes: 2 increased, 2 decreased, 0 added, 0 removed
-
-Top increases:
-- 2330.TW 台積電: +100,000 (7,700,000 -> 7,800,000)
-- 2059.TW 川湖: +10,000 (90,000 -> 100,000)
+- 3665.TW 貿聯-KY: +240,000 (1,341,000 -> 1,581,000)
 
 Top decreases:
-- 2345.TW 智邦: -206,000 (1,466,000 -> 1,260,000)
-- 6442.TW 光聖: -65,000 (320,000 -> 255,000)
+- 6584.TW 南俊國際: -304,000 (1,884,000 -> 1,580,000)
+
+00403A.TW holdings update: 2026-11-04
+Holdings count: 50
+Changes: 2 increased, 1 decreased, 0 added, 0 removed
+
+Top increases:
+- 2330.TW 台積電: +100,000 (7,800,000 -> 7,900,000)
+- 2454.TW 聯發科: +40,000 (1,580,000 -> 1,620,000)
+
+Top decreases:
+- 3211.TW 順達: -150,000 (2,000,000 -> 1,850,000)
