@@ -1,11 +1,7 @@
-00992A.TW holdings update: 2026-11-10
-Holdings count: 44
-Changes: 3 increased, 1 decreased, 1 added, 0 removed
-
-Top increases:
-- 3661.TW 世芯-KY: +130,000 (0 -> 130,000)
-- 2454.TW 聯發科: +110,000 (259,000 -> 369,000)
-- 3653.TW 健策: +72,000 (69,000 -> 141,000)
+00992A.TW holdings update: 2026-11-11
+Holdings count: 43
+Changes: 0 increased, 2 decreased, 0 added, 1 removed
 
 Top decreases:
-- 6584.TW 南俊國際: -363,000 (1,069,000 -> 706,000)
+- 5347.TW 世界: -629,000 (629,000 -> 0)
+- 6584.TW 南俊國際: -144,000 (706,000 -> 562,000)
