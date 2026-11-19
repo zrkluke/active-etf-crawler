@@ -1,47 +1,36 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-11-18
+00981A.TW holdings update: 2026-11-19
 Holdings count: 50
-Changes: 6 increased, 0 decreased, 0 added, 0 removed
+Changes: 1 increased, 3 decreased, 0 added, 0 removed
 
 Top increases:
-- 3711.TW 日月光投控: +418,000 (17,522,000 -> 17,940,000)
-- 3665.TW 貿聯-KY: +156,000 (3,067,848 -> 3,223,848)
-- 3017.TW 奇鋐: +113,000 (6,965,000 -> 7,078,000)
-- 3443.TW 創意: +37,000 (1,015,000 -> 1,052,000)
-- 2454.TW 聯發科: +28,000 (5,833,000 -> 5,861,000)
-- 6223.TW 旺矽: +26,000 (2,657,000 -> 2,683,000)
-
-00991A.TW holdings update: 2026-11-18
-Holdings count: 50
-Changes: 4 increased, 3 decreased, 1 added, 1 removed
-
-Top increases:
-- 3105.TW 穩懋: +290,000 (0 -> 290,000)
-- 2368.TW 金像電: +30,000 (690,000 -> 720,000)
-- 3008.TW 大立光: +30,000 (1,000 -> 31,000)
-- 6223.TW 旺矽: +27,000 (170,000 -> 197,000)
+- 2345.TW 智邦: +120,000 (7,093,000 -> 7,213,000)
 
 Top decreases:
-- 2327.TW 國巨*: -500,000 (3,900,000 -> 3,400,000)
-- 2408.TW 南亞科: -400,000 (4,200,000 -> 3,800,000)
-- 2357.TW 華碩: -1,000 (1,000 -> 0)
+- 8046.TW 南電: -616,000 (7,609,000 -> 6,993,000)
+- 2383.TW 台光電: -270,000 (4,328,000 -> 4,058,000)
+- 5274.TW 信驊: -32,000 (238,900 -> 206,900)
 
-00992A.TW holdings update: 2026-11-18
+00991A.TW holdings update: 2026-11-19
+Holdings count: 50
+Changes: 0 increased, 2 decreased, 0 added, 0 removed
+
+Top decreases:
+- 2408.TW 南亞科: -2,000,000 (3,800,000 -> 1,800,000)
+- 2327.TW 國巨*: -1,900,000 (3,400,000 -> 1,500,000)
+
+00992A.TW holdings update: 2026-11-19
 Holdings count: 44
 Changes: 0 increased, 0 decreased, 0 added, 0 removed
 No share-count changes versus the previous snapshot.
 
-00403A.TW holdings update: 2026-11-18
+00403A.TW holdings update: 2026-11-19
 Holdings count: 50
-Changes: 3 increased, 3 decreased, 1 added, 2 removed
+Changes: 1 increased, 1 decreased, 0 added, 0 removed
 
 Top increases:
-- 3711.TW 日月光投控: +450,000 (2,850,000 -> 3,300,000)
-- 2379.TW 瑞昱: +100,000 (0 -> 100,000)
-- 3661.TW 世芯-KY: +21,000 (50,000 -> 71,000)
+- 3661.TW 世芯-KY: +49,000 (71,000 -> 120,000)
 
 Top decreases:
-- 6274.TW 台燿: -500,000 (500,000 -> 0)
-- 3211.TW 順達: -350,000 (350,000 -> 0)
-- 2481.TW 強茂: -70,000 (350,000 -> 280,000)
+- 2481.TW 強茂: -279,000 (280,000 -> 1,000)
