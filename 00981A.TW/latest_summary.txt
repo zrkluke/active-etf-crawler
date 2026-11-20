@@ -1,11 +1,7 @@
-00981A.TW holdings update: 2026-11-19
+00981A.TW holdings update: 2026-11-20
 Holdings count: 50
-Changes: 1 increased, 3 decreased, 0 added, 0 removed
-
-Top increases:
-- 2345.TW 智邦: +120,000 (7,093,000 -> 7,213,000)
+Changes: 0 increased, 2 decreased, 0 added, 0 removed
 
 Top decreases:
-- 8046.TW 南電: -616,000 (7,609,000 -> 6,993,000)
-- 2383.TW 台光電: -270,000 (4,328,000 -> 4,058,000)
-- 5274.TW 信驊: -32,000 (238,900 -> 206,900)
+- 2303.TW 聯電: -8,236,000 (68,628,000 -> 60,392,000)
+- 2449.TW 京元電子: -250,000 (7,756,450 -> 7,506,450)

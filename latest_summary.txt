@@ -1,36 +1,35 @@
 Active ETF holdings update
 
-00981A.TW holdings update: 2026-11-19
-Holdings count: 50
-Changes: 1 increased, 3 decreased, 0 added, 0 removed
-
-Top increases:
-- 2345.TW 智邦: +120,000 (7,093,000 -> 7,213,000)
-
-Top decreases:
-- 8046.TW 南電: -616,000 (7,609,000 -> 6,993,000)
-- 2383.TW 台光電: -270,000 (4,328,000 -> 4,058,000)
-- 5274.TW 信驊: -32,000 (238,900 -> 206,900)
-
-00991A.TW holdings update: 2026-11-19
+00981A.TW holdings update: 2026-11-20
 Holdings count: 50
 Changes: 0 increased, 2 decreased, 0 added, 0 removed
 
 Top decreases:
-- 2408.TW 南亞科: -2,000,000 (3,800,000 -> 1,800,000)
-- 2327.TW 國巨*: -1,900,000 (3,400,000 -> 1,500,000)
+- 2303.TW 聯電: -8,236,000 (68,628,000 -> 60,392,000)
+- 2449.TW 京元電子: -250,000 (7,756,450 -> 7,506,450)
 
-00992A.TW holdings update: 2026-11-19
-Holdings count: 44
-Changes: 0 increased, 0 decreased, 0 added, 0 removed
-No share-count changes versus the previous snapshot.
-
-00403A.TW holdings update: 2026-11-19
+00991A.TW holdings update: 2026-11-20
 Holdings count: 50
-Changes: 1 increased, 1 decreased, 0 added, 0 removed
-
-Top increases:
-- 3661.TW 世芯-KY: +49,000 (71,000 -> 120,000)
+Changes: 0 increased, 3 decreased, 0 added, 0 removed
 
 Top decreases:
-- 2481.TW 強茂: -279,000 (280,000 -> 1,000)
+- 2327.TW 國巨*: -700,000 (1,500,000 -> 800,000)
+- 2408.TW 南亞科: -500,000 (1,800,000 -> 1,300,000)
+- 8299.TW 群聯: -20,000 (195,000 -> 175,000)
+
+00992A.TW holdings update: 2026-11-20
+Holdings count: 44
+Changes: 0 increased, 2 decreased, 0 added, 0 removed
+
+Top decreases:
+- 6415.TW 矽力*-KY: -197,000 (590,000 -> 393,000)
+- 3264.TW 欣銓: -44,000 (500,000 -> 456,000)
+
+00403A.TW holdings update: 2026-11-20
+Holdings count: 50
+Changes: 0 increased, 3 decreased, 0 added, 0 removed
+
+Top decreases:
+- 2301.TW 光寶科: -249,000 (250,000 -> 1,000)
+- 3583.TW 辛耘: -162,000 (480,000 -> 318,000)
+- 2059.TW 川湖: -25,000 (100,000 -> 75,000)
