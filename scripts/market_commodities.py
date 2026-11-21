@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 import json
 import sys
 import urllib.parse
@@ -36,12 +37,39 @@ def fetch_taiex_data() -> tuple[float, float, float]:
     if not result_list:
         raise ValueError("No result data found in Yahoo Finance response")
     result = result_list[0]
+    meta = result.get("meta", {})
+    timestamps = result.get("timestamp", [])
     
     indicators = result.get("indicators", {}).get("quote", [{}])[0]
     close_prices = indicators.get("close", [])
     
-    # Filter out None values (e.g. non-trading days)
-    valid_closes = [c for c in close_prices if c is not None]
+    tz_taipei = datetime.timezone(datetime.timedelta(hours=8))
+    regular_price = meta.get("regularMarketPrice")
+    regular_time = meta.get("regularMarketTime")
+    
+    if timestamps and len(timestamps) == len(close_prices):
+        # Pair timestamps with non-None close prices to track trading dates accurately
+        dated_closes: list[tuple[datetime.date, float]] = []
+        for ts, close in zip(timestamps, close_prices):
+            if close is not None:
+                bar_date = datetime.datetime.fromtimestamp(ts, tz_taipei).date()
+                dated_closes.append((bar_date, float(close)))
+        
+        # Yahoo Finance often leaves the latest trading day's close as None in indicators.quote[0].close
+        # even after market close, while meta.regularMarketPrice already holds the latest close.
+        if regular_price is not None and regular_time is not None:
+            market_date = datetime.datetime.fromtimestamp(regular_time, tz_taipei).date()
+            if not dated_closes or market_date > dated_closes[-1][0]:
+                dated_closes.append((market_date, float(regular_price)))
+            elif market_date == dated_closes[-1][0]:
+                dated_closes[-1] = (market_date, float(regular_price))
+        
+        valid_closes = [c for _, c in dated_closes]
+    else:
+        # Fallback if timestamps are unavailable
+        valid_closes = [float(c) for c in close_prices if c is not None]
+        if close_prices and close_prices[-1] is None and regular_price is not None:
+            valid_closes.append(float(regular_price))
     
     if len(valid_closes) < 60:
         raise ValueError(f"Not enough valid close prices to calculate MA60. Found: {len(valid_closes)}")

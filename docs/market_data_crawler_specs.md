@@ -15,7 +15,8 @@
     *   `range=120d`：取得過去 120 天的歷史數據（用以確保扣除假日後仍有足夠的 60 天交易日）。
     *   `interval=1d`：以「日」為間隔。
 *   **計算季線 (MA60) 與乖離率**：
-    *   由於遇假日或休市時，Yahoo Finance 的收盤價陣列可能包含 `None` 缺失值，程式會先進行過濾：`valid_closes = [c for c in close_prices if c is not None]`。
+    *   由於遇假日或休市時，Yahoo Finance 的收盤價陣列可能包含 `None` 缺失值，且 Yahoo Finance 在收盤後常會延遲寫入當日最後一筆 `indicators.quote[0].close`（維持 `None` 直到隔日），但 `meta.regularMarketPrice` 與 `meta.regularMarketTime` 已包含當日收盤價。
+    *   程式會先將 `timestamp` 與非 `None` 的收盤價依台北時間（UTC+8）日期配對，再比對 `meta.regularMarketTime` 的日期：若最新交易日尚未出現在有效收盤價陣列中，則補入 `meta.regularMarketPrice`；若同日已存在則以 `regularMarketPrice` 更新，避免重複計算或延遲一天。
     *   取最後 60 筆有效收盤價計算平均值：`MA60 = sum(valid_closes[-60:]) / 60`。
     *   乖離率計算公式：`乖離率 = (今日收盤價 - MA60) / MA60 * 100%`。
 
