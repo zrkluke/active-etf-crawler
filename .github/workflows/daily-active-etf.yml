@@ -36,15 +36,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Network Diagnostics
-        run: |
-          echo "==== Testing connection to MoneyDJ (urllib) ===="
-          uv run python -c "import urllib.request; urllib.request.urlopen('https://www.moneydj.com', timeout=5)" && echo "urllib success" || echo "urllib failed"
-          echo "==== Testing connection to MoneyDJ (curl) ===="
-          curl -I -m 5 https://www.moneydj.com || echo "curl failed"
-
-      - name: Fetch holdings and send notification
-        run: uv run main.py --notify
+      - name: Fetch market data and send notification
+        run: uv run main.py --market-only --notify
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -71,6 +64,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
-            git commit -m "chore(data): 更新主動式 ETF 持股資料" -m "更新 MoneyDJ 持股快照、比對結果與最新摘要。"
+            git commit -m "chore(data): 更新每日大盤與商品數據標記" -m "更新大盤與商品數據發送紀錄。"
             git push origin HEAD:data
           fi

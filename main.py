@@ -35,27 +35,36 @@ def main() -> int:
     )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR, help="Output directory.")
     parser.add_argument("--notify", action="store_true", help="Send Telegram/email notification when secrets are configured.")
+    parser.add_argument(
+        "--market-only",
+        action="store_true",
+        help="Skip active ETF holdings crawler and only run market, commodities, and margin balance crawler.",
+    )
     args = parser.parse_args()
 
     # 1. Run Active ETF Crawler
-    try:
-        etfs = resolve_etfs(args.etfs)
-        results, failures = run_all(etfs, args.output_dir)
-        summary = build_combined_summary(results, failures)
-        summary_path = write_summary(args.output_dir / "latest_summary.txt", summary)
-        print("=== Active ETF holdings summary ===")
-        print(summary_path.read_text(encoding="utf-8"))
+    etf_failed = False
+    if not args.market_only:
+        try:
+            etfs = resolve_etfs(args.etfs)
+            results, failures = run_all(etfs, args.output_dir)
+            summary = build_combined_summary(results, failures)
+            summary_path = write_summary(args.output_dir / "latest_summary.txt", summary)
+            print("=== Active ETF holdings summary ===")
+            print(summary_path.read_text(encoding="utf-8"))
 
-        if args.notify:
-            if any(result.is_new_snapshot for result in results) or failures:
-                sent = notify_results(results, failures)
-                print(f"ETF notifications: {'; '.join(sent) if sent else 'skipped, no notification secrets configured'}")
-            else:
-                print("ETF notifications: skipped, snapshots already exist for these data dates")
-        etf_failed = bool(failures and not results)
-    except Exception as exc:
-        print(f"ERROR running ETF crawler: {exc}", file=sys.stderr)
-        etf_failed = True
+            if args.notify:
+                if any(result.is_new_snapshot for result in results) or failures:
+                    sent = notify_results(results, failures)
+                    print(f"ETF notifications: {'; '.join(sent) if sent else 'skipped, no notification secrets configured'}")
+                else:
+                    print("ETF notifications: skipped, snapshots already exist for these data dates")
+            etf_failed = bool(failures and not results)
+        except Exception as exc:
+            print(f"ERROR running ETF crawler: {exc}", file=sys.stderr)
+            etf_failed = True
+    else:
+        print("Skipping Active ETF crawler (--market-only enabled).")
 
     # 2. Run Market, Commodities, and Margin Balance Crawler
     print("\n=== Market and Commodities summary ===")
