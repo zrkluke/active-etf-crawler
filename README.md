@@ -37,32 +37,21 @@ snapshot exists for that ETF.
 
 The workflow is in `.github/workflows/daily-active-etf.yml`.
 
-It runs every day at `18:37`, `19:13`, `20:47`, `21:23`, and `22:11 Asia/Taipei`. GitHub Actions
-scheduled jobs can be delayed or occasionally dropped, so the later entries are
-fallback windows. The script only sends a notification when at least one tracked
-ETF creates a new MoneyDJ data-date snapshot, so fallback runs do not send
-duplicate messages.
+Because GitHub Actions `on: schedule` frequently experiences multi-hour delays (often 6–12 hours), the workflow uses external cron as the primary trigger and keeps a minimal overnight fallback schedule:
 
-Notifications are sent per ETF. If multiple ETFs have new snapshots, Telegram and
-email receive one message per ETF instead of one combined message.
-
-ETF fetch errors are isolated. If one ETF fails, the script still writes snapshots
-and summaries for the other ETFs, records the failed ETF in `data/latest_summary.txt`,
-and sends a separate failure notification when notification secrets are configured.
+1. **Primary — External Cron via `workflow_dispatch` (`cron-job.org`)**:
+   Triggers `POST https://api.github.com/repos/zrkluke/active-etf-crawler/actions/workflows/daily-active-etf.yml/dispatches` with `{"ref":"main"}` at `21:05, 21:35, 22:05, 22:35, 23:05, 23:35` (`Asia/Taipei`, Mon–Fri). `workflow_dispatch` runs within seconds without schedule backlog.
+2. **Fallback — Minimal GitHub Actions `schedule`**:
+   Runs twice overnight (`00:37` and `02:37 Asia/Taipei`, Tue–Sat morning for Mon–Fri trading days) as a safety net if external cron fails or TWSE/TPEx publish late. A `concurrency` group + `data/market_sent.txt` marker skips already-sent dates without duplicate messages.
 
 ```yaml
 schedule:
-  - cron: "37 10 * * *"
-  - cron: "13 11 * * *"
-  - cron: "47 12 * * *"
-  - cron: "23 13 * * *"
-  - cron: "11 14 * * *"
+  - cron: "37 16,18 * * 1-5"
 ```
 
 It also supports manual runs from the GitHub Actions page with `workflow_dispatch`.
 
-The workflow commits updated `data/` files back into the repository, so the next
-scheduled run can compare each ETF against its previous snapshot.
+The workflow commits updated `data/` files back into the `data` branch so subsequent runs skip already-sent dates.
 
 ## Telegram notification
 
