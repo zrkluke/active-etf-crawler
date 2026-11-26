@@ -15,7 +15,7 @@ from scripts.moneydj_etf_holdings import (
     DEFAULT_OUTPUT_DIR
 )
 from scripts.market_commodities import fetch_market_and_commodities_summary
-from scripts.retail_ratio import fetch_latest_retail_ratio
+from scripts.retail_ratio import fetch_latest_retail_ratio, get_taipei_now
 from scripts.margin_balance import fetch_margin_balance_summary
 
 def main() -> int:
@@ -72,38 +72,48 @@ def main() -> int:
         is_trading_day = True
         rr_summary = ""
         header = ""
+        date_str = ""
         market_sent_path = args.output_dir / "market_sent.txt"
         already_sent = False
-        
+
+        # Read marker file upfront so we can skip before hitting external APIs if today is already sent
+        last_sent_date = ""
+        if market_sent_path.exists():
+            try:
+                last_sent_date = market_sent_path.read_text(encoding="utf-8").strip()
+            except Exception as read_err:
+                print(f"WARNING: Failed to read {market_sent_path}: {read_err}", file=sys.stderr)
+
+        taipei_now = get_taipei_now()
+        if taipei_now.hour >= 15 and last_sent_date == taipei_now.strftime("%Y/%m/%d"):
+            already_sent = True
+            print(f"Market and commodities notification already sent for {last_sent_date} according to {market_sent_path}. Skipping.")
+
         # Determine the latest trading day and ratio
         target_date = None
-        try:
-            date_str, ratio, target_date = fetch_latest_retail_ratio()
-            # 📊 【今日大盤與商品數據】({date_str})
-            header = f"\U0001F4CA \u3010\u4eca\u65e5\u5927\u76e4\u8207\u5546\u54c1\u6578\u64da\u3011({date_str})"
-            # 👥 微台指散戶多空比: {ratio:+.2f}%
-            rr_summary = f"\U0001F465 \u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4: {ratio:+.2f}%"
-            
-            # Read fixed marker file and compare the date content
-            if market_sent_path.exists():
-                try:
-                    last_sent_date = market_sent_path.read_text(encoding="utf-8").strip()
-                    if last_sent_date == date_str:
-                        already_sent = True
-                        print(f"Market and commodities notification already sent for {date_str} according to {market_sent_path}. Skipping.")
-                except Exception as read_err:
-                    print(f"WARNING: Failed to read {market_sent_path}: {read_err}", file=sys.stderr)
-        except ValueError as ve:
-            if "No trading data" in str(ve):
-                # No trading data in the recent period (e.g. prolonged holiday)
-                print(f"No trading data available ({ve}). Skipping market/commodity Telegram notification.")
+        if not already_sent:
+            try:
+                date_str, ratio, target_date = fetch_latest_retail_ratio()
+                # 📊 【今日大盤與商品數據】({date_str})
+                header = f"\U0001F4CA \u3010\u4eca\u65e5\u5927\u76e4\u8207\u5546\u54c1\u6578\u64da\u3011({date_str})"
+                # 👥 微台指散戶多空比: {ratio:+.2f}%
+                rr_summary = f"\U0001F465 \u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4: {ratio:+.2f}%"
+
+                if last_sent_date and last_sent_date == date_str:
+                    already_sent = True
+                    print(f"Market and commodities notification already sent for {date_str} according to {market_sent_path}. Skipping.")
+            except ValueError as ve:
+                if "No trading data" in str(ve):
+                    # No trading data in the recent period (e.g. prolonged holiday)
+                    print(f"No trading data available ({ve}). Skipping market/commodity Telegram notification.")
+                    is_trading_day = False
+                else:
+                    print(f"Retail ratio data incomplete ({ve}). Skipping Telegram notification for now to allow fallback runs to retry.")
+                    is_trading_day = False
+            except Exception as e:
+                # Network timeout or parsing error: skip sending incomplete message and let fallback runs retry
+                print(f"Retail ratio fetch failed ({e}). Skipping Telegram notification for now to allow fallback runs to retry.")
                 is_trading_day = False
-            else:
-                # Other value errors are treated as errors
-                rr_summary = f"\U0001F465 \u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4: \u6293\u53d6\u5931\u6557 ({ve})"
-        except Exception as e:
-            # Network or parsing errors: we still proceed but note the failure
-            rr_summary = f"\U0001F465 \u5fae\u53f0\u6307\u6563\u6236\u591a\u7a7a\u6bd4: \u6293\u53d6\u5931\u6557 ({e})"
 
         if is_trading_day and not already_sent:
             try:
