@@ -2,6 +2,11 @@ name: Daily Active ETF Holdings
 
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Force run even if market_sent.txt already matches expected date"
+        type: boolean
+        default: false
   schedule:
     # Primary triggers are driven by external cron (cron-job.org) via workflow_dispatch
     # at 21:05, 21:35, 22:05, 22:35, 23:05, 23:35 Asia/Taipei (Mon-Fri).
@@ -34,23 +39,29 @@ jobs:
           path: data
           fetch-depth: 1
 
-      - name: Check if already sent (schedule fallback)
+      - name: Check if already sent
         id: marker
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" != "schedule" ]; then
-            echo "Non-schedule trigger (${{ github.event_name }}); proceeding to crawler."
+          if [ "${{ inputs.force }}" = "true" ]; then
+            echo "Force flag enabled; skipping marker check."
             echo "already_sent=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          TPE_YESTERDAY=$(TZ="Asia/Taipei" date -d "24 hours ago" "+%Y/%m/%d")
+          TPE_HOUR=$((10#$(TZ="Asia/Taipei" date "+%H")))
+          if [ "$TPE_HOUR" -ge 15 ]; then
+            EXPECTED_DATE=$(TZ="Asia/Taipei" date "+%Y/%m/%d")
+          else
+            EXPECTED_DATE=$(TZ="Asia/Taipei" date -d "24 hours ago" "+%Y/%m/%d")
+          fi
+
           MARKER_FILE="data/market_sent.txt"
           if [ -f "$MARKER_FILE" ]; then
             LAST_SENT=$(tr -d '\r\n ' < "$MARKER_FILE")
-            echo "Last sent date: $LAST_SENT | Expected fallback date: $TPE_YESTERDAY"
-            if [ "$LAST_SENT" = "$TPE_YESTERDAY" ]; then
-              echo "Already sent for $TPE_YESTERDAY. Skipping fallback run."
+            echo "Event: ${{ github.event_name }} | Last sent: $LAST_SENT | Expected: $EXPECTED_DATE"
+            if [ "$LAST_SENT" = "$EXPECTED_DATE" ]; then
+              echo "Already sent for $EXPECTED_DATE. Skipping crawler execution."
               echo "already_sent=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
