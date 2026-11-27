@@ -336,14 +336,17 @@ def write_summary(path: Path, summary: str) -> Path:
     return path
 
 
-def send_telegram(summary: str) -> bool:
+def send_telegram(summary: str, *, parse_mode: str | None = None) -> bool:
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
         return False
 
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = json.dumps({"chat_id": chat_id, "text": summary[:3900]}).encode("utf-8")
+    body: dict[str, str] = {"chat_id": chat_id, "text": summary[:3900]}
+    if parse_mode:
+        body["parse_mode"] = parse_mode
+    payload = json.dumps(body).encode("utf-8")
     request = Request(url, data=payload, headers={"Content-Type": "application/json"}, method="POST")
 
     with urlopen(request, timeout=30) as response:

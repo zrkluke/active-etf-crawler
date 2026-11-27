@@ -14,7 +14,10 @@ from scripts.moneydj_etf_holdings import (
     send_telegram,
     DEFAULT_OUTPUT_DIR
 )
-from scripts.market_commodities import fetch_market_and_commodities_summary
+from scripts.market_commodities import (
+    fetch_market_and_commodities_summary,
+    format_market_summary_telegram_html,
+)
 from scripts.retail_ratio import fetch_latest_retail_ratio, get_taipei_now
 from scripts.margin_balance import fetch_margin_balance_summary
 
@@ -128,7 +131,8 @@ def main() -> int:
                 print(combined_summary)
                 
                 if args.notify:
-                    sent_tg = send_telegram(combined_summary)
+                    tg_summary = format_market_summary_telegram_html(combined_summary)
+                    sent_tg = send_telegram(tg_summary, parse_mode="HTML")
                     if sent_tg:
                         print("Market, commodities, and margin balance Telegram notification sent successfully.")
                         # Write/Overwrite the fixed marker file with today's data date
